@@ -5,7 +5,7 @@ import './homepage.styles.scss';
 const HomePage = () => (
   <div>
     <h1 className="home-name">
-      I AM MICHAEL TRPAK
+      I AM <span className="my-name">MICHAEL TRPAK</span>
     </h1>
     <h2 className="home-title">
       FULL STACK WEB DEVELOPER
