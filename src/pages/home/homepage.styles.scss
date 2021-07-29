@@ -1,0 +1,64 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  line-height: 2;
+  text-align: center;
+  color: aliceblue;
+  letter-spacing: 3px;
+
+.home-name {
+    opacity: 1;
+    font-size: 50px;
+    animation-name: name-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+
+    .my-name {
+      text-shadow: 5px 5px 3px black;
+    }
+}
+
+@keyframes name-animation {
+    0% {
+        opacity: 0;
+        transform: translatex(100%);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translatex(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+  } 
+
+  .home-title {
+    animation: title-animation 3s linear;
+    font-size: 36px;
+  }
+
+  @keyframes title-animation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .home-title {
+    font-size: 18px;
+  }
+}
