@@ -11,7 +11,7 @@ const Header = () => (
       <Link className="option" to="/hobbies">HOBBIES</Link>
       <Link className="option" to="/projects">PROJECTS</Link>
       <Link className="option" to="skills">SKILLS</Link>
-      <GoThreeBars />
+      <GoThreeBars className="dropdown" />
     </div>
   </div>
 );

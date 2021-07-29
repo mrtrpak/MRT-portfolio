@@ -6,6 +6,9 @@ import './App.css';
 import bgImage from './assets/mntsBG.jpg';
 import Header from './components/header/header.component';
 import HomePage from './pages/home/homepage.component';
+import HobbiesPage from './pages/hobbies/hobbies.component';
+import ProjectsPage from './pages/projects/projects.components';
+import SkillsPage from './pages/skills/skills.component';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/hobbies" component={HobbiesPage} />
+        <Route exact path="/projects" component={ProjectsPage} />
+        <Route exact path="/skills" component={SkillsPage} />
       </Switch>
     </div>
   );

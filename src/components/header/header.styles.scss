@@ -8,13 +8,19 @@
 
   .options {
     margin-right: 3vw;
+    display: flex;
+    align-items: center;
 
     .option {
       margin: auto 1vw;
       text-decoration: none;
       cursor: pointer;
       color: whitesmoke;
-      font-weight: 300;
+    }
+
+    .dropdown {
+      color: whitesmoke;
+      margin-left: 1vw;
     }
   }
 }
