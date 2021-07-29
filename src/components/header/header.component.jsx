@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { GoThreeBars } from 'react-icons/go';
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
+
 
 import './header.styles.scss';
-
-import Dropdown from '../dropdown/dropdown.component';
 
 const Header = () => (
   <div className="header">
@@ -13,8 +12,12 @@ const Header = () => (
       <Link className="option" to="/hobbies">HOBBIES</Link>
       <Link className="option" to="/projects">PROJECTS</Link>
       <Link className="option" to="skills">SKILLS</Link>
-      <GoThreeBars className="dropdownIcon" />
-      <Dropdown />
+      <a className="option" href="https://github.com/mrtrpak">
+        <AiOutlineGithub />
+      </a>
+      <a className="option" href="https://www.linkedin.com/in/michael-trpak/">
+        <AiFillLinkedin />
+      </a>
     </div>
   </div>
 );
