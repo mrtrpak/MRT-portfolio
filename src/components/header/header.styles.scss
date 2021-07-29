@@ -1,0 +1,20 @@
+.header {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: forestgreen;
+
+  .options {
+    margin-right: 3vw;
+
+    .option {
+      margin: auto 1vw;
+      text-decoration: none;
+      cursor: pointer;
+      color: whitesmoke;
+      font-weight: 300;
+    }
+  }
+}
