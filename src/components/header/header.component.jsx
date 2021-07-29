@@ -4,6 +4,8 @@ import { GoThreeBars } from 'react-icons/go';
 
 import './header.styles.scss';
 
+import Dropdown from '../dropdown/dropdown.component';
+
 const Header = () => (
   <div className="header">
     <div className="options">
@@ -11,7 +13,8 @@ const Header = () => (
       <Link className="option" to="/hobbies">HOBBIES</Link>
       <Link className="option" to="/projects">PROJECTS</Link>
       <Link className="option" to="skills">SKILLS</Link>
-      <GoThreeBars />
+      <GoThreeBars className="dropdownIcon" />
+      <Dropdown />
     </div>
   </div>
 );
