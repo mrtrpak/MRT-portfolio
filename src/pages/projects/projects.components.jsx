@@ -9,27 +9,24 @@ import { projects } from './projects.data';
 const ProjectsPage = () => {
 
   return (
-    <div>
+    <div className="projects-container">
       {
         projects.map(project => (
-          <div>
-            <div className="project">
-              <img src={ project.clip } alt="Gif clip" className="gif" />
-              <div className="title-container">
-                <h3 className="project-title">
-                  { project.title }
-                </h3>
-              </div>
-            </div>
-            <p className="project-info">
-              { project.info }
-            </p>
-            <div>
-              <p>TO REPO</p>
-              <AiOutlineGithub />
-            </div>
+        <div className="project">
+          <div className="gif" style={{ backgroundImage: `url(${project.clip})` }}>
+            <h3 className="project-title">
+              { project.title }
+            </h3>
           </div>
-        ))
+          <p className="project-info">
+            { project.info }
+          </p>
+          <div>
+            <p>TO REPO</p>
+            <AiOutlineGithub />
+          </div>
+        </div>
+      ))
       }
     </div>
   );  

@@ -17,7 +17,7 @@ export const projects = [
     clip: brainGif,
     url: "https://smart-brain-detect3.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/facerecognition",
-    info: "Upon submission of an image the App will outline a face it detects. React, Bcrypt & Clarifai were tools used."
+    info: "Post an image to the App and it will outline a detected face. React, Bcrypt & Clarifai were tools used."
   },
   {
     id: 3,
