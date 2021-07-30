@@ -1,21 +1,22 @@
 .projects-container {
+  width: 100vw;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   .project {
     width: 32vw;
-    height: 28vw;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     
     .gif {
       width: 100%;
-      height: auto;
+      height: 70%;
       background-size: cover;
       background-position: center;
-      position: relative;
     }
   }
 }

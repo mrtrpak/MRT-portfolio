@@ -6,17 +6,19 @@ const ProjectBox = ({ projects }) => {
   console.log(projects, "box");
 
   return (
-    <div className="box" style={{
-      // backgroundImage: `url(${ projects.clip })`,
-      // height: "100%",
-      // width: "auto",
-      // backgroundSize: "cover",
-      // backgroundPosition: "center"
-    }}>
-      <div className="title">
-        { projects.title }
-      </div>
-    </div>
+    <div className="project">
+          <div className="gif" style={{ backgroundImage: `url(${projects[0].clip})` }}>
+            <h3 className="project-title">
+              { projects.title }
+            </h3>
+          </div>
+          <p className="project-info">
+            { projects.info }
+          </p>
+          <div>
+            <p>TO REPO</p>
+          </div>
+        </div>
   );
 }
 
