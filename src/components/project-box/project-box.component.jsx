@@ -1,19 +1,19 @@
 import React from 'react';
 
-import './box.styles.scss';
+import './project-box.styles.scss';
 
-const Box = ({ title, clip }) => (
+const ProjectBox = ({ projects }) => (
   <div className="box" style={{
-    backgroundImage: `url(${ clip })`,
+    backgroundImage: `url(${ projects.clip })`,
     height: "100%",
     width: "auto",
     backgroundSize: "cover",
     backgroundPosition: "center"
   }}>
     <div className="title">
-      { title }
+      { projects.title }
     </div>
   </div>
 );
 
-export default Box;
+export default ProjectBox;
