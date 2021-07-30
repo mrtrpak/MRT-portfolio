@@ -2,7 +2,7 @@ import React from 'react';
 
 import './box.styles.scss';
 
-const box = ({ title, clip }) => (
+const Box = ({ title, clip }) => (
   <div className="box" style={{
     backgroundImage: `url(${ clip })`,
     height: "100%",
@@ -16,4 +16,4 @@ const box = ({ title, clip }) => (
   </div>
 );
 
-export default box;
+export default Box;
