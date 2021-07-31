@@ -5,11 +5,11 @@ import eagleGif from '../../assets/gifs/eagle-outfitters.gif';
 export const projects = [
   {
     id: 1,
-    title: "To Eagle Outfitters Website",
+    title: "To Eagle Outfitters Clothing Website",
     clip: eagleGif,
     url: "https://eagle-outfitters.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/eagle-outfitters",
-    info: "A  fully functional mock clothing website. React, Redux, Firebase & Node-SASS were tools used."
+    info: "A mock clothing website with multiple categories and a user cart updated in real time. React, Redux, Firebase & Node-SASS were tools used."
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const projects = [
     clip: brainGif,
     url: "https://smart-brain-detect3.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/facerecognition",
-    info: "Post an image to the App and it will outline a detected face. React, Bcrypt & Clarifai were tools used."
+    info: "An App that can detect a face from an image provided and tracks user submissions. React, Bcrypt & Clarifai were tools used."
   },
   {
     id: 3,
@@ -25,6 +25,6 @@ export const projects = [
     clip: businessGif,
     url: "https://stormy-harbor-93453.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/Futurum-est-nostrum",
-    info: "A free to use business card creator. React, MySql & Express were tools used."
+    info: "A business card creator that creates a personalized printout for the user. React, MDBootstrap, MySql & Express were tools used."
   }
 ];

@@ -16,11 +16,11 @@ const ProjectsPage = () => {
                 {project.title}
               </h3>
             </div>
-            <p className="project-info">
-              {project.info}
-            </p>
-            <div>
-              <p>TO REPO</p>
+            <div className="project-info">
+              <p>
+                {project.info}
+              </p>
+              <p className="project-link">TO GITHUB REPO</p>
             </div>
           </div>
         ))
