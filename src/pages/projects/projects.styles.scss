@@ -38,9 +38,13 @@
       text-align: center;
       border: 1px solid black;
 
+      .project-text {
+        margin-bottom: 15px;
+      }
+
       .project-link {
-        margin-top: 10px;
         cursor: pointer;
+        color: black;
       }
     }
   }

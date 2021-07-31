@@ -9,7 +9,7 @@ export const projects = [
     clip: eagleGif,
     url: "https://eagle-outfitters.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/eagle-outfitters",
-    info: "A mock clothing website with multiple categories and a user cart updated in real time. React, Redux, Firebase & Node-SASS were tools used."
+    info: "A clothing e-commerce website with a dynamically updated user cart. React, Redux, Firebase & Node-SASS were tools used."
   },
   {
     id: 2,
