@@ -1,6 +1,7 @@
 .projects-container {
   width: 100vw;
   height: 80vh;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -17,6 +18,13 @@
       height: 70%;
       background-size: cover;
       background-position: center;
+    }
+
+    .project-title {
+      padding: 5px;
+      text-align: center;
+      background-color: forestgreen;
+      color: whitesmoke;
     }
   }
 }
