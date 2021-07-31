@@ -5,7 +5,7 @@ import eagleGif from '../../assets/gifs/eagle-outfitters.gif';
 export const projects = [
   {
     id: 1,
-    title: "Eagle Outfitters",
+    title: "To Eagle Outfitters Website",
     clip: eagleGif,
     url: "https://eagle-outfitters.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/eagle-outfitters",
@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Face Recognition",
+    title: "To Face Recognition Website",
     clip: brainGif,
     url: "https://smart-brain-detect3.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/facerecognition",
@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Business Cards",
+    title: "To Business Card Creator Website",
     clip: businessGif,
     url: "https://stormy-harbor-93453.herokuapp.com/",
     gitUrl: "https://github.com/mrtrpak/Futurum-est-nostrum",
