@@ -13,12 +13,10 @@
 
     .option {
       margin: auto 1vw;
-      text-decoration: none;
-      cursor: pointer;
       color: whitesmoke;
     }
 
-    a {
+    .option-icon {
       display: flex;
       align-items: center;
     }

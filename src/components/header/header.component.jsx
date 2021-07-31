@@ -12,10 +12,10 @@ const Header = () => (
       <Link className="option" to="/hobbies">HOBBIES</Link>
       <Link className="option" to="/projects">PROJECTS</Link>
       <Link className="option" to="skills">SKILLS</Link>
-      <a className="option" href="https://github.com/mrtrpak">
+      <a className="option option-icon" href="https://github.com/mrtrpak">
         <AiOutlineGithub />
       </a>
-      <a className="option" href="https://www.linkedin.com/in/michael-trpak/">
+      <a className="option option-icon" href="https://www.linkedin.com/in/michael-trpak/">
         <AiFillLinkedin />
       </a>
     </div>

@@ -7,6 +7,7 @@ import { projects } from './projects.data';
 const ProjectsPage = () => {
 
   return (
+    
     <div className="projects-container">
       {
         projects.map(project => (

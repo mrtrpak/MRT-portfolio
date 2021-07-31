@@ -6,3 +6,8 @@
 body {
   font-family: 'PT Serif', serif;
 }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
