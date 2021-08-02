@@ -7,8 +7,24 @@ import { DiJqueryUiLogo } from 'react-icons/di';
 import './skill-icons.styles.scss';
 
 const SkillIcons = () => (
-  <div>
-
+  <div className="skill-icons-container">
+    <div className="skill-icons">
+      <FaReact />
+      <FaCss3Alt />
+      <IoLogoJavascript />
+      <SiMysql />
+      <IoLogoNodejs />
+      <DiJqueryUiLogo />
+      <SiRedux />
+    </div>
+    <div className="skill-icons">
+      <FaBootstrap />
+      <SiMaterialUi />
+      <SiMongodb />
+      <IoLogoFirebase />
+      <SiHeroku />
+      <FaFileWord />
+    </div>
   </div>
 );
 
