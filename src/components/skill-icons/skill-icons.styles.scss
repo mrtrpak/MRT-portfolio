@@ -1,0 +1,15 @@
+.skill-icons-container {
+  width: 90%;
+  height: 150px;
+  border: 1px solid black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .skill-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
