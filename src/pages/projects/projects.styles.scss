@@ -54,7 +54,8 @@
     }
 
     .project-info {
-      background-color: whitesmoke;
+      background-color: forestgreen;
+      color: whitesmoke;
       padding: 10px;
       text-align: center;
       border-top: 1px solid black;
@@ -65,7 +66,7 @@
 
       .project-link {
         cursor: pointer;
-        color: black;
+        color: whitesmoke;
       }
     }
   }
