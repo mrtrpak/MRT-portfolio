@@ -11,9 +11,10 @@ const ProjectsPage = () => {
       {
         projects.map(project => (
           <div className="project" key={project.id}>
+            <h3 className="project-title">{project.title}</h3>
             <div className="gif" style={{ backgroundImage: `url(${project.clip})` }}>
-              <a href={project.url} className="project-title">
-                {project.title}
+              <a href={project.url} className="website-link">
+                GO TO WEBSITE
               </a>
             </div>
             <div className="project-info">
