@@ -2,9 +2,11 @@ import React from 'react';
 
 import './skills.styles.scss';
 
+import SkillIcons from '../../components/skill-icons/skill-icons.component';
+
 const SkillsPage = () => (
-  <div>
-    skills page
+  <div className="skills-page">
+    <SkillIcons />
   </div>
 );
 
