@@ -12,7 +12,7 @@ import SkillsPage from './pages/skills/skills.component';
 
 function App() {
   return (
-    <div style={{
+    <div className="app" style={{
       backgroundImage: `url(${bgImage})`,
       height: "100vh",
       width: "100%",

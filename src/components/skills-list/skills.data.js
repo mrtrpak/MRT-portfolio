@@ -1,7 +1,7 @@
 export const skills = [
   {
     id: 1,
-    name: "Technical Skills",
+    title: "Technical Skills",
     list: [
       "React", 
       "Javascript", 
@@ -21,7 +21,7 @@ export const skills = [
   },
   {
     id: 2,
-    name: "Soft Skills",
+    title: "Soft Skills",
     list: [
       "team-oriented",
       "adaptability",

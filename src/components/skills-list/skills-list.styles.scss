@@ -1,0 +1,38 @@
+.skills-list {
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgb(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+
+  .title-container {
+    height: 30px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: forestgreen;
+    color: whitesmoke;
+
+    .skill-title {
+      letter-spacing: 1.5px;
+      border-bottom: 1px solid whitesmoke;
+    }
+  }
+
+  .skills-container {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .technical-list {
+      columns: 2 auto;
+    }
+
+    .skill {
+    line-height: 1.8;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    }
+  }
+}
