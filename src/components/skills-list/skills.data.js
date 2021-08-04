@@ -32,4 +32,4 @@ export const skills = [
       "considerate of others"
     ]
   }
-]
+];
