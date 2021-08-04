@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import './App.css';
+import './App.scss';
 
 import bgImage from './assets/mntsBG.jpg';
 import Header from './components/header/header.component';
