@@ -18,5 +18,18 @@ export const skills = [
       "Express.js",
       "Heroku"
     ]
+  },
+  {
+    id: 2,
+    name: "Soft Skills",
+    list: [
+      "team-oriented",
+      "adaptability",
+      "dedicated to growth",
+      "problem-solver",
+      "ability to lead",
+      "organized",
+      "considerate of others"
+    ]
   }
 ]
