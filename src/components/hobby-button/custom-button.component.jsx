@@ -5,7 +5,10 @@ import './custom-button.styles.scss';
 
 const CustomButton = ({ route, title }) => (
   <div className="custom-button">
-    <Link>
+    <Link to={route}>
+      <span className="custom-button-title">
+        {title}
+      </span>
     </Link>
   </div>
 
