@@ -1,35 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 
 import './soccer.styles.scss';
 
-import soccerToken from '../../utils/secret';
-
-
-
+import { soccerToken } from '../../utils/secret';
 
 const SoccerPage = () => {
-  const [response, setResponse] = useState([]);
+  let [response, setResponse] = useState([]);
+  const [league, setLeague] = useState("BL1");
 
-  const getLeagueStandings = league => {
-    return axios.request({
-      url: `https://api.football-data.org/v2/competitions/${league}/standings`,
-      method: "get",
-      headers: { "X-Auth-Token": soccerToken }
-    })
-    .then(res => setResponse(res))
-    .catch(err => err);
-  };
-
-  useEffect(() =>{
-    getLeagueStandings("PL")
-  }, []);
-
-  console.log(response);
+  
+  useEffect(() => {
+    setLeague("PL");
+    console.log(league);
+  }, [league, setLeague]);
 
   return (
-    <div>
-      {response}
+    <div style={{ height: "300px"}}>
+      <h1>hello hoolojadkfna</h1>
     </div>
   );
 };
