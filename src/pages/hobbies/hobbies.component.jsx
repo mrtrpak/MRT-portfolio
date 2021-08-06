@@ -7,8 +7,6 @@ import CustomButton from "../../components/custom-button/custom-button.component
 
 const HobbiesPage = () => (
   <div className="hobbies-page">
-    <Link to="/soccer">To Soccer Page</Link>
-
     <CustomButton title={"soccer"} route={"/soccer"} /> 
     <CustomButton title={"gamer"} route={"/"} />
   </div>

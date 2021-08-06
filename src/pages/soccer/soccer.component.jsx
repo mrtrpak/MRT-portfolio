@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 import './soccer.styles.scss';
 
@@ -7,16 +8,22 @@ import { soccerToken } from '../../utils/secret';
 const SoccerPage = () => {
   let [response, setResponse] = useState([]);
   const [league, setLeague] = useState("BL1");
-
   
   useEffect(() => {
-    setLeague("PL");
-    console.log(league);
-  }, [league, setLeague]);
+    fetch("https://api.football-data.org/v2/competitions/BL1/standings", {
+      method: "GET",
+      headers: { "X-Auth-Token": soccerToken }
+    })
+    .then(response => response.json())
+    .then(json => {
+      console.log(json.standings[0].table)
+    })
+    .catch(err => console.log(err))
+  }, []);
 
   return (
-    <div style={{ height: "300px"}}>
-      <h1>hello hoolojadkfna</h1>
+    <div>
+      {response}
     </div>
   );
 };
