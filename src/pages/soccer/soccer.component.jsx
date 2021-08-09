@@ -23,6 +23,8 @@ const SoccerPage = () => {
   //   .catch(err => console.log(err))
   // }, [response]);
 
+  const { title, code } = league;
+
   return (
     <div className="soccer-page">
       <div className="league-options">
@@ -42,6 +44,9 @@ const SoccerPage = () => {
           Spanish La Liga
         </button>
       </div>
+      <h4 className="league-title">
+        {title}
+      </h4>
     </div>
   );
 };
