@@ -6,8 +6,10 @@ import './soccer.styles.scss';
 import { soccerToken } from '../../utils/secret';
 
 const SoccerPage = () => {
-  let [response, setResponse] = useState([]);
+  const [response, setResponse] = useState({});
   const [league, setLeague] = useState("BL1");
+
+  const 
   
   useEffect(() => {
     fetch("https://api.football-data.org/v2/competitions/BL1/standings", {
@@ -16,15 +18,18 @@ const SoccerPage = () => {
     })
     .then(response => response.json())
     .then(json => {
-      console.log(json.standings[0].table)
+      console.log(json.standings[0].table);
+      Object.entries(json.standings[0].table).map(team => {
+        return console.log(team[1].team.name, "hello object keys");
+      })
     })
     .catch(err => console.log(err))
-  }, []);
+  }, [response]);
 
   return (
-    <div>
-      {response}
-    </div>
+    <ul>
+
+    </ul>
   );
 };
 
