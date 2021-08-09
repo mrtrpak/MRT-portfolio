@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import './soccer.styles.scss';
 
+import SoccerTable from '../../components/soccer-table/soccer-table.component';
+
 const SoccerPage = () => {
    const [league, setLeague] = useState({
      title: "Bundesliga",
@@ -47,6 +49,7 @@ const SoccerPage = () => {
       <h4 className="league-title">
         {title}
       </h4>
+      <SoccerTable code={code} />
     </div>
   );
 };
