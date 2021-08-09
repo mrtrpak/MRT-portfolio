@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import './soccer.styles.scss';
 
-import { soccerToken } from '../../utils/secret';
-
 const SoccerPage = () => {
-  const [response, setResponse] = useState({});
+   const [league, setLeague] = useState("BL1");
   
   // useEffect(() => {
   //   fetch("https://api.football-data.org/v2/competitions/BL1/standings", {
@@ -23,9 +21,20 @@ const SoccerPage = () => {
   // }, [response]);
 
   return (
-    <ul>
+    <div className="soccer-page">
+      {/* <div className="league-options">
+        <button className="league-option" onClick={setLeague("PL")}>
+          English Premier League
+        </button>
+        <button className="league-option" onClick={setLeague("BL1")}>
+          German Bundesliga
+        </button>
+        <button className="league-option" onClick={setLeague("PD")}>
+          Spanish La Liga
+        </button>
+      </div> */}
 
-    </ul>
+    </div>
   );
 };
 
