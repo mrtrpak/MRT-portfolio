@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import './soccer.styles.scss';
 
 const SoccerPage = () => {
-   const [league, setLeague] = useState("BL1");
+   const [league, setLeague] = useState({
+     title: "Bundesliga",
+     code: "BL1" 
+    });
   
   // useEffect(() => {
   //   fetch("https://api.football-data.org/v2/competitions/BL1/standings", {
@@ -20,18 +23,22 @@ const SoccerPage = () => {
   //   .catch(err => console.log(err))
   // }, [response]);
 
-  console.log(league);
-
   return (
     <div className="soccer-page">
       <div className="league-options">
-        <button className="league-option" onClick={() => setLeague("PL")}>
+        <button className="league-option" onClick={
+          () => setLeague({ title: "Premier League", code: "PL" })
+        }>
           English Premier League
         </button>
-        <button className="league-option" onClick={() => setLeague("BL1")}>
+        <button className="league-option" onClick={
+          () => setLeague({ title: "Bundesliga", code: "BL1" })
+        }>
           German Bundesliga
         </button>
-        <button className="league-option" onClick={() => setLeague("PD")}>
+        <button className="league-option" onClick={
+          () => setLeague({ title: "La Liga", code: "PD" })
+        }>
           Spanish La Liga
         </button>
       </div>
