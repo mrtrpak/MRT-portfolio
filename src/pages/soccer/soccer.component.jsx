@@ -20,20 +20,21 @@ const SoccerPage = () => {
   //   .catch(err => console.log(err))
   // }, [response]);
 
+  console.log(league);
+
   return (
     <div className="soccer-page">
-      {/* <div className="league-options">
-        <button className="league-option" onClick={setLeague("PL")}>
+      <div className="league-options">
+        <button className="league-option" onClick={() => setLeague("PL")}>
           English Premier League
         </button>
-        <button className="league-option" onClick={setLeague("BL1")}>
+        <button className="league-option" onClick={() => setLeague("BL1")}>
           German Bundesliga
         </button>
-        <button className="league-option" onClick={setLeague("PD")}>
+        <button className="league-option" onClick={() => setLeague("PD")}>
           Spanish La Liga
         </button>
-      </div> */}
-
+      </div>
     </div>
   );
 };
