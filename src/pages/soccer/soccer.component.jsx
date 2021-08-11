@@ -14,18 +14,18 @@ const SoccerPage = () => {
 
   return (
     <div className="soccer-page">
-      <div className="league-options">
-        <button className="league-option" onClick={
+      <div className="league-option-buttons">
+        <button className="league-button" onClick={
           () => setLeague({ title: "Premier League", code: "PL" })
         }>
           English Premier League
         </button>
-        <button className="league-option" onClick={
+        <button className="league-button" onClick={
           () => setLeague({ title: "Bundesliga", code: "BL1" })
         }>
           German Bundesliga
         </button>
-        <button className="league-option" onClick={
+        <button className="league-button" onClick={
           () => setLeague({ title: "La Liga", code: "PD" })
         }>
           Spanish La Liga
