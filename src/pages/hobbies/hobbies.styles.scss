@@ -6,6 +6,25 @@
     margin: 0 15px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+
+    .hobby {
+      text-align: center;
+      background-color: whitesmoke;
+      width: 45vw;
+      border-radius: 10px;
+      overflow: hidden;
+      padding-bottom: 15px;
+
+      .hobby-title {
+        background-color: forestgreen;
+        color: whitesmoke;
+        padding: 3px 0;
+        letter-spacing: 0.8px;
+      }
+
+      .hobby-text {
+        margin: 15px;
+      }
+    }
   }
 }
