@@ -6,7 +6,7 @@ import SoccerTable from '../../components/soccer-table/soccer-table.component';
 
 const SoccerPage = () => {
    const [league, setLeague] = useState({
-     title: "Bundesliga",
+     title: "Deutsche Fußball-Bundesliga",
      code: "BL1" 
     });
 
