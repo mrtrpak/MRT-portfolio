@@ -1,0 +1,33 @@
+.custom-button {
+  background-color: forestgreen;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: inline-block;
+  position: relative;
+  transition: 1s;
+
+  .custom-button-title {
+    color: whitesmoke;
+  }
+}
+
+.custom-button::after {
+  content: '>>';
+  color: whitesmoke;
+  position: absolute;
+  opacity: 0;
+  top: 5px;
+  right: -20px;
+  transition: 1s;
+}
+
+.custom-button:hover {
+  padding-right: 20px;
+  padding-left: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.custom-button:hover::after {
+  opacity: 1;
+  right: 1px;
+}
