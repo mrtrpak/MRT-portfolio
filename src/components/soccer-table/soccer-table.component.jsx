@@ -16,18 +16,18 @@ const SoccerTable = (props) => {
     19: {}, 20: {}
   });
 
-  useEffect(() => {
-    fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
-    { method: "GET",  headers: { "X-Auth-Token": soccerToken }})
-    .then(response => response.json())
-    .then(json => Object.entries(json.standings[0].table).map(
-      (team, idx) => (
-        setStandingsInfo({ ...standingsInfo, [idx]: {team}})
-      )
-    .then(console.log(standingsInfo))
-    ))
-    .catch(err => console.log(err));
-  });
+  // useEffect(() => {
+  //   fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
+  //   { method: "GET",  headers: { "X-Auth-Token": soccerToken }})
+  //   .then(response => response.json())
+  //   .then(json => Object.entries(json.standings[0].table).map(
+  //     (team, idx) => (
+  //       setStandingsInfo({ ...standingsInfo, [idx]: {team}})
+  //     )
+  //   .then(console.log(standingsInfo))
+  //   ))
+  //   .catch(err => console.log(err));
+  // });
 
   return (
     <table className="soccer-table">
