@@ -16,19 +16,19 @@ const SoccerPage = () => {
     <div className="soccer-page">
       <div className="league-option-buttons">
         <button className="league-button" onClick={
-          () => setLeague({ title: "Premier League", code: "PL" })
+          () => setLeague({ title: "English Premier League", code: "PL" })
         }>
-          English Premier League
+          English Soccer League
         </button>
         <button className="league-button" onClick={
-          () => setLeague({ title: "Bundesliga", code: "BL1" })
+          () => setLeague({ title: "Deutsche Fußball-Bundesliga", code: "BL1" })
         }>
-          German Bundesliga
+          German Soccer League
         </button>
         <button className="league-button" onClick={
-          () => setLeague({ title: "La Liga", code: "PD" })
+          () => setLeague({ title: "Campeonato Nacional de Liga de Primera División", code: "PD" })
         }>
-          Spanish La Liga
+          Spanish Soccer League
         </button>
       </div>
       <h4 className="league-title">
