@@ -1,9 +1,10 @@
 .projects-container {
   width: 100vw;
-  height: 75vh;
+  height: 80vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 15px;
 
   .project {
@@ -72,5 +73,11 @@
         color: whitesmoke;
       }
     }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .projects-container {
+    height: 60vh;
   }
 }
