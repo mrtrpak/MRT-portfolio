@@ -3,4 +3,31 @@
   width: 96%;
   height: 100%;
   border-radius: 10px;
+
+  .team-data {
+    text-align: center;
+    height: 75px;
+    
+    .data {
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+  
+      .crestUrl {
+        width: 70px;
+        height: auto;
+        background-position: center;
+      }
+    }
+    
+    @media screen and (max-width: 950px) {
+      .data {
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+    
+    .data-last {
+      border-right: none;
+    }
+  }
 }
