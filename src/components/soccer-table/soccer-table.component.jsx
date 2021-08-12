@@ -4,7 +4,7 @@ import './soccer-table.styles.scss';
 
 import { soccerToken } from '../../utils/secret';
 
-import TableHeaders from '../table-headers/table-headers.component';
+import SoccerTableHeaders from '../soccer-table-headers/soccer-table-headers.component';
 
 const SoccerTable = (props) => {
   const { code } = props;
@@ -32,7 +32,7 @@ const SoccerTable = (props) => {
   return (
     <div className="soccer-table-container">
       <table className="soccer-table">
-        <TableHeaders />
+        <SoccerTableHeaders />
         <tbody>
           { !isMounted ? null : 
             Object.entries(standingsInfo.table).map((team, idx) => {

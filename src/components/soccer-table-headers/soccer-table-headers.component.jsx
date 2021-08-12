@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './table-headers.styles.scss';
+import './soccer-table-headers.styles.scss';
 
 const TableHeaders = () => {
   const tableHeaders = [
