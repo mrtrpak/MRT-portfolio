@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="app" style={{
       backgroundImage: `url(${bgImage})`,
-      height: "115vh",
+      height: "100vh",
       width: "100vw",
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
