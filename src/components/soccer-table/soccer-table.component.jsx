@@ -27,8 +27,6 @@ const SoccerTable = (props) => {
 
       fetchData();
       setIsMounted(true);
-
-      console.log(standingsInfo);
   }, [code]);
 
   return (
