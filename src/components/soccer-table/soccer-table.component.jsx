@@ -31,8 +31,7 @@ const SoccerTable = (props) => {
 
   return (
     <div className="soccer-table-container">
-
-    <table className="soccer-table">
+      <table className="soccer-table">
         <TableHeaders />
         <tbody>
           { !isMounted ? null : 
@@ -63,8 +62,8 @@ const SoccerTable = (props) => {
             })
           }
         </tbody>
-    </table>
-            </div>
+      </table>
+    </div>
   );
 };
 
