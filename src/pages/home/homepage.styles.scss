@@ -24,7 +24,7 @@
 @keyframes name-animation {
     0% {
         opacity: 0;
-        transform: translatex(80%);
+        transform: translatex(60%);
     }
     50% {
         opacity: 0.5;
@@ -61,4 +61,19 @@
   .home-title {
     font-size: 18px;
   }
+
+  @keyframes name-animation {
+    0% {
+        opacity: 0;
+        transform: translatex(30%);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translatex(0%);
+    }
+    100% {
+        opacity: 1;
+        transform: translatex(0);
+    }
+  } 
 }
