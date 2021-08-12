@@ -23,7 +23,7 @@ const HobbiesPage = () => (
           of video games is astounding. Using api.rawg.io I can see who is 
           top dog in the video game world!
         </p>
-        <CustomButton title={"gamer"} route={"/"} />
+        <CustomButton title={"gamer"} route={"/gamer"} />
       </div>
     </div>
   </div>

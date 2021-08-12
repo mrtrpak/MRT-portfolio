@@ -10,6 +10,7 @@ import HobbiesPage from './pages/hobbies/hobbies.component';
 import ProjectsPage from './pages/projects/projects.components';
 import SkillsPage from './pages/skills/skills.component';
 import SoccerPage from './pages/soccer/soccer.component';
+import GamerPage from './pages/gamer/gamer.component';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route exact path="/projects" component={ProjectsPage} />
         <Route exact path="/skills" component={SkillsPage} />
         <Route exact path="/soccer" component={SoccerPage} />
+        <Route exact path="/gamer" component={GamerPage} />
       </Switch>
     </div>
   );
