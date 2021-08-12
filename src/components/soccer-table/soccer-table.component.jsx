@@ -30,38 +30,41 @@ const SoccerTable = (props) => {
   }, [code]);
 
   return (
-    <table className="soccer-table">
-      <TableHeaders />
-      <tbody>
-        { !isMounted ? null : 
-          Object.entries(standingsInfo.table).map((team, idx) => {
-            const { name, crestUrl } = team[1].team;
-            const { 
-              position, gamesPlayed, won, draw, lost, points,
-              goalsFor, goalsAgainst, goalDifference
-            } = team[1];
+    <div className="soccer-table-container">
 
-            return (
-              <tr key={idx} className={`team-data ${position}-pos`}>
-                <td className="data">{position}</td>
-                <td className="data">{name}</td>
-                <td className="data">
-                  <img className="crestUrl" src={crestUrl} alt="team logo" />
-                </td>
-                <td className="data">{gamesPlayed}</td>
-                <td className="data">{won}</td>
-                <td className="data">{draw}</td>
-                <td className="data">{lost}</td>
-                <td className="data">{points}</td>
-                <td className="data">{goalsFor}</td>
-                <td className="data">{goalsAgainst}</td>
-                <td className="data data-last">{goalDifference}</td>
-              </tr>
-            )
-          })
-        }
-      </tbody>
+    <table className="soccer-table">
+        <TableHeaders />
+        <tbody>
+          { !isMounted ? null : 
+            Object.entries(standingsInfo.table).map((team, idx) => {
+              const { name, crestUrl } = team[1].team;
+              const { 
+                position, gamesPlayed, won, draw, lost, points,
+                goalsFor, goalsAgainst, goalDifference
+              } = team[1];
+
+              return (
+                <tr key={idx} className={`team-data ${position}-pos`}>
+                  <td className="data">{position}</td>
+                  <td className="data">{name}</td>
+                  <td className="data">
+                    <img className="crestUrl" src={crestUrl} alt="team logo" />
+                  </td>
+                  <td className="data">{gamesPlayed}</td>
+                  <td className="data">{won}</td>
+                  <td className="data">{draw}</td>
+                  <td className="data">{lost}</td>
+                  <td className="data">{points}</td>
+                  <td className="data">{goalsFor}</td>
+                  <td className="data">{goalsAgainst}</td>
+                  <td className="data data-last">{goalDifference}</td>
+                </tr>
+              )
+            })
+          }
+        </tbody>
     </table>
+            </div>
   );
 };
 
