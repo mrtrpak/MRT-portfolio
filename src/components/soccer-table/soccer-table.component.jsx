@@ -43,8 +43,8 @@ const SoccerTable = (props) => {
               } = team[1];
 
               return (
-                <tr key={idx} className={`team-data ${position}-pos`}>
-                  <td className="data">{position}</td>
+                <tr key={idx} className={`team-data-row ${position}-pos`}>
+                  <td className="data position">{position}</td>
                   <td className="data">{name}</td>
                   <td className="data">
                     <img className="crestUrl" src={crestUrl} alt="team logo" />
@@ -53,7 +53,7 @@ const SoccerTable = (props) => {
                   <td className="data">{won}</td>
                   <td className="data">{draw}</td>
                   <td className="data">{lost}</td>
-                  <td className="data">{points}</td>
+                  <td className="data points">{points}</td>
                   <td className="data">{goalsFor}</td>
                   <td className="data">{goalsAgainst}</td>
                   <td className="data data-last">{goalDifference}</td>

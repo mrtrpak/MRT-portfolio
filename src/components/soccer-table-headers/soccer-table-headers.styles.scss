@@ -1,14 +1,13 @@
 .soccer-headers-row {
-  border-bottom: 1px solid black;
   position: sticky;
   top: 0;
-  background-color: forestgreen;
+  background-color: black;
 
   .soccer-header {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
     color: whitesmoke;
-    padding: 3px 0;
+    padding: 3px;
+  border-radius: 10px;
+
   }
 
   .gd {
