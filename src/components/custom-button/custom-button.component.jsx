@@ -7,7 +7,7 @@ const CustomButton = ({ route, title }) => (
   <div className="custom-button">
     <Link to={route}>
       <span className="custom-button-title">
-        {title}
+        {title.toUpperCase()}
       </span>
     </Link>
   </div>

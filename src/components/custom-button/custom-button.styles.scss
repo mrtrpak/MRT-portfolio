@@ -4,7 +4,7 @@
   padding: 5px 10px;
   display: inline-block;
   position: relative;
-  transition: 1s;
+  transition: 0.3s;
 
   .custom-button-title {
     color: whitesmoke;
@@ -18,7 +18,7 @@
   opacity: 0;
   top: 5px;
   right: -20px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .custom-button:hover {

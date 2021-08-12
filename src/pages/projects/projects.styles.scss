@@ -1,9 +1,10 @@
 .projects-container {
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 15px;
 
   .project {
     width: 32vw;

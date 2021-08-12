@@ -14,7 +14,7 @@ const HobbiesPage = () => (
           data from api.football-data.org I can easily keep up to date
           on multiple league standings! 
         </p>
-        <CustomButton title={"soccer"} route={"/soccer"} /> 
+        <CustomButton title={"league standings"} route={"/soccer"} /> 
       </div>
       <div className="hobby">
         <h4 className="hobby-title">VIDEO GAME ENTHUSIAST</h4>
