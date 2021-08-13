@@ -5,7 +5,7 @@ import { AiOutlineArrowRight } from 'react-icons/ai';
 import './custom-route-button.styles.scss';
 
 const CustomRouteButton = ({ route, title }) => (
-  <div className="custom-button">
+  <div className="custom-route-button">
     <Link to={route} className="custom-button-link">
       <span className="custom-button-title">
         {title.toUpperCase()}
