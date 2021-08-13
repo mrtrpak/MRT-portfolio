@@ -1,6 +1,6 @@
 .soccer-key-modal {
   height: 300px;
-  width: 500px;
+  width: 600px;
   position: fixed;
   z-index: 1;
   background-color: whitesmoke;
@@ -9,6 +9,53 @@
   overflow: hidden;
   border-radius: 10px;
   margin-top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 3px;
+
+  .key-modal-title {
+    text-align: center;
+    padding: 3px 0;
+
+    .modal-title-text {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  .headers-key-list {
+    column-count: 3;
+    text-align: center;
+
+    .headers-key-text {
+      padding: 3px;
+    }
+  }
+
+  .color-key {
+    text-align: center;
+    padding: 3px 30px;
+
+    .key-description {
+      color: whitesmoke;
+      text-shadow: #000 0px 0px 2px;
+      -webkit-font-smoothing: antialiased;
+      font-size: large;
+      margin-right: 3px;
+      padding: 1px 5px;
+      border-radius: 10px;
+    }
+
+    .green-key-description {
+      background-color: forestgreen;
+      
+    }
+
+    .red-key-description {
+      background-color: red;
+
+    }
+  }
 }
 
 @media screen and (min-width: 950px) {
