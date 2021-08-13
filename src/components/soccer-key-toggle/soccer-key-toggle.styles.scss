@@ -1,0 +1,15 @@
+.soccer-key-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .key-title {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .toggle-icon {
+    height: 30px;
+    width: 50px;
+  }
+}
