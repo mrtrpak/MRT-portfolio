@@ -4,7 +4,8 @@ import './game-query.styles.scss';
 
 const GameQuery = () => (
   <div>
-    game query button
+    <input type="text" />
+    
   </div>
 );
 

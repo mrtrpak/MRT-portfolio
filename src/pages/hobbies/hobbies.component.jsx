@@ -2,7 +2,7 @@ import React from 'react';
 
 import './hobbies.styles.scss';
 
-import CustomButton from "../../components/custom-button/custom-button.component";
+import CustomRouteButton from "../../components/custom-route-button/custom-route-button.component";
 
 const HobbiesPage = () => (
   <div className="hobbies-page">
@@ -14,7 +14,7 @@ const HobbiesPage = () => (
           data from api.football-data.org I can easily keep up to date
           on multiple league standings! 
         </p>
-        <CustomButton title={"league standings"} route={"/soccer"} /> 
+        <CustomRouteButton title={"league standings"} route={"/soccer"} /> 
       </div>
       <div className="hobby">
         <h4 className="hobby-title">VIDEO GAME ENTHUSIAST</h4>
@@ -23,7 +23,7 @@ const HobbiesPage = () => (
           of video games is astounding. Using api.rawg.io I can see who is 
           top dog in the video game world!
         </p>
-        <CustomButton title={"gamer"} route={"/gamer"} />
+        <CustomRouteButton title={"gamer"} route={"/gamer"} />
       </div>
     </div>
   </div>
