@@ -4,6 +4,7 @@ import './soccer.styles.scss';
 
 import SoccerTable from '../../components/soccer-table/soccer-table.component';
 import CustomApiButton from '../../components/custom-api-button/custom-api-button.component';
+import SoccerKeyToggle from '../../components/soccer-key-toggle/soccer-key-toggle.component';
 
 const SoccerPage = () => {
    const [league, setLeague] = useState({
@@ -26,6 +27,7 @@ const SoccerPage = () => {
       <h4 className="league-title">
         {title}
       </h4>
+      <SoccerKeyToggle />
       <SoccerTable code={code} />
     </div>
   );
