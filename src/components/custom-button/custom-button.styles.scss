@@ -1,8 +1,7 @@
 .custom-button {
   background-color: forestgreen;
   border-radius: 10px;
-  padding: 5px 5px;
-  width: 80%;
+  padding: 5px 10px;
   height: 100%;
   transition: 0.3s;
   display: flex;
@@ -22,9 +21,10 @@
   
   .custom-button-icon-container {
     display: flex;
+
     
     .custom-button-icon {
-      margin-left: 10px;
+      margin: auto 10px;
       display: none;
     }
   }
@@ -38,8 +38,6 @@
 }
 
 .custom-button:hover {
-  padding-right: 15px;
-  padding-left: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
 
   .custom-button-icon {
