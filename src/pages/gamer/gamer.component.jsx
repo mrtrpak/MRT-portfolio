@@ -6,8 +6,8 @@ import GameData from '../../components/game-data/game-data.component';
 import GameQueryButton from '../../components/game-query-button/game-query-button.component';
 
 const GamerPage = () => (
-  <div>
-    <h2>
+  <div className="gamer-page">
+    <h2 className="gamer-page-title">
       title
     </h2>
     <GameData />

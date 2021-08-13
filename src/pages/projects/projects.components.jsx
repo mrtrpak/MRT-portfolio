@@ -3,6 +3,7 @@ import React from 'react';
 import './projects.styles.scss';
 
 import { projects } from './projects.data';
+
 const ProjectsPage = () => {
 
   return (
