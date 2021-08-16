@@ -15,7 +15,11 @@ const GamerPage = () => {
 
     setGameQuery(removeSpaces.toLowerCase());
     console.log(gameQuery);
-  }
+  };
+
+  const onSubmit = () => {
+
+  };
   
   return (
     <div className="gamer-page">
