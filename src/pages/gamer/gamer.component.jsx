@@ -24,7 +24,7 @@ const GamerPage = () => {
       </h2>
       <GameData />
       <div className="game-query">
-        <input onChange={onChange.toString()} type="text" className="game-text" 
+        <input onChange={onChange} type="text" className="game-text" 
           id="game-query-input" placeholder="Enter a game title here"
           on />
         <CustomApiButton btnTitle={"Find Game"} className="game-submit-btn" />
