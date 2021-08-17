@@ -5,6 +5,10 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   
   .gamer-page-title {
     text-align: center;
@@ -15,9 +19,15 @@
     box-shadow: 0 1px 5px black;
   }
 
+  .game-data-container {
+    height: 50%;
+    background-color: blue;
+  }
+
   .game-query {
     height: 125px;
     width: 100%;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

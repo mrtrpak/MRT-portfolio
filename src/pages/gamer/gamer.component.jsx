@@ -10,6 +10,7 @@ import CustomApiButton from '../../components/custom-api-button/custom-api-butto
 const GamerPage = () => {
   const [gameQuery, setGameQuery] = useState("");
   const [gameData, setGameData] = useState({ gameData: []});
+  const [finalChoice, setFinalChoice] = useState(false);
 
   const onChange = e => {
     const { value } = e.target;
@@ -32,15 +33,17 @@ const GamerPage = () => {
   const handleEnterKeypress = e => {
     if (e.keyCode === 0) {
       fetchCall();
-    }
-  }
+    };
+  };
 
   return (
     <div className="gamer-page">
       <h2 className="gamer-page-title">
         title
       </h2>
-      <GameData />
+      <div className="game-data-container">
+        <GameData />
+      </div>
       <div className="game-query">
         <input onChange={onChange} onKeyPress={handleEnterKeypress} type="text" className="game-text" 
           id="game-query-input" placeholder="Enter a game title here"
