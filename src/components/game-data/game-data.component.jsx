@@ -4,7 +4,7 @@ import './game-data.styles.scss';
 
 const GameData = () => (
   <div className="game-data">
-
+    game data component
   </div>
 );
 

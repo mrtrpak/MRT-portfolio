@@ -11,29 +11,50 @@ const GamerPage = () => {
   const [gameQuery, setGameQuery] = useState("");
   const [gameData, setGameData] = useState({ gameData: []});
   const [finalChoice, setFinalChoice] = useState(false);
+  const [call, setCall] = useState(0);
 
   const onChange = e => {
     const { value } = e.target;
-    const removeSpaces = value.replace(/\s/g , "-");
+    const removeSpaces = value.toString().replace(/\s/g , "-");
 
     setGameQuery(value ? removeSpaces.toLowerCase() : null);
   };
 
-  const fetchCall = () => { fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
+  
+  const fetchCall = () => { 
+    fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
     .then(response => response.json())
     .then(data => setGameData({ gameData: data.results }))
     .catch(err => console.log(err));
-    console.log(gameData);
+    setCall(call + 1);
+    console.log(call);
   };
+  
+  console.log(gameData);
+  
+  const getGameOptions = () => {
+
+    // if (gameData) {
+    //   gameData.gameData.slice(0, 10).map((game, idx) => (
+    //     document.getElementById("game-options").append(
+    //       <p className="game-option" key={idx}>{game[idx].name}</p>
+    //     )
+    //   ))
+    // } else return;
+  } 
 
   const onClick = () => {
     fetchCall();
+    getGameOptions();
   };
 
   const handleEnterKeypress = e => {
-    if (e.keyCode === 0) {
+    if (e.key === "Enter") {
       fetchCall();
-    };
+      getGameOptions();
+    } else {
+      return
+    }
   };
 
   return (
@@ -42,7 +63,11 @@ const GamerPage = () => {
         title
       </h2>
       <div className="game-data-container">
-        <GameData />
+        {
+          !finalChoice ? 
+            <div id="game-options"></div>
+          : <GameData />
+        }
       </div>
       <div className="game-query">
         <input onChange={onChange} onKeyPress={handleEnterKeypress} type="text" className="game-text" 
