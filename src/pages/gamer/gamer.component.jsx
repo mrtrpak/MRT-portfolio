@@ -24,37 +24,28 @@ const GamerPage = () => {
   const fetchCall = () => { 
     fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
     .then(response => response.json())
-    .then(data => setGameData({ gameData: data.results }))
+    .then(data => setGameData({ gameData: data.results }), getGameOptions())
+    .then(() => getGameOptions())
     .catch(err => console.log(err));
     setCall(call + 1);
     console.log(call);
   };
   
   console.log(gameData);
-  
-  const getGameOptions = () => {
 
-    // if (gameData) {
-    //   gameData.gameData.slice(0, 10).map((game, idx) => (
-    //     document.getElementById("game-options").append(
-    //       <p className="game-option" key={idx}>{game[idx].name}</p>
-    //     )
-    //   ))
-    // } else return;
-  } 
+  const getGameOptions = () => {
+    gameData.gameData.slice(0, 10).map((game, idx) => {
+      return console.log(idx, game.name)}
+  )} 
 
   const onClick = () => {
     fetchCall();
-    getGameOptions();
   };
 
   const handleEnterKeypress = e => {
     if (e.key === "Enter") {
       fetchCall();
-      getGameOptions();
-    } else {
-      return
-    }
+    } else return;
   };
 
   return (
@@ -70,9 +61,11 @@ const GamerPage = () => {
         }
       </div>
       <div className="game-query">
-        <input onChange={onChange} onKeyPress={handleEnterKeypress} type="text" className="game-text" 
+        <input 
+          onChange={onChange} onKeyPress={handleEnterKeypress} 
+          type="text" className="game-text" 
           id="game-query-input" placeholder="Enter a game title here"
-          on />
+        />
         <CustomApiButton btnTitle={"Find Game"} className="game-submit-btn" 
           onClick={onClick} />
       </div>
