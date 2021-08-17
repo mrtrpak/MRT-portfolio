@@ -11,7 +11,7 @@ const SoccerTable = (props) => {
   
 
   const [standingsInfo, setStandingsInfo] = useState({ table: {}});
-  const [isMounted, setIsMounted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); 
 
   useEffect(() => {
     setIsMounted(false);
