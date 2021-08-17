@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import './gamer.styles.scss';
 
+import { key } from '../../utils/secret';
+
 import GameData from '../../components/game-data/game-data.component';
 import CustomApiButton from '../../components/custom-api-button/custom-api-button.component';
-import { key } from '../../utils/secret';
 
 const GamerPage = () => {
   const [gameQuery, setGameQuery] = useState("");
@@ -17,17 +18,22 @@ const GamerPage = () => {
     setGameQuery(value ? removeSpaces.toLowerCase() : null);
   };
 
-  const onClick = e => {
-    e.preventDefault();
-    console.log(gameQuery);
-
-    fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
-      .then(response => response.json())
-      .then(data => setGameData({ gameData: data.results }))
-      .catch(err => console.log(err));
-    };
-    
+  const fetchCall = () => { fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
+    .then(response => response.json())
+    .then(data => setGameData({ gameData: data.results }))
+    .catch(err => console.log(err));
     console.log(gameData);
+  };
+
+  const onClick = () => {
+    fetchCall();
+  };
+
+  const handleEnterKeypress = e => {
+    if (e.keyCode === 0) {
+      fetchCall();
+    }
+  }
 
   return (
     <div className="gamer-page">
@@ -36,7 +42,7 @@ const GamerPage = () => {
       </h2>
       <GameData />
       <div className="game-query">
-        <input onChange={onChange} type="text" className="game-text" 
+        <input onChange={onChange} onKeyPress={handleEnterKeypress} type="text" className="game-text" 
           id="game-query-input" placeholder="Enter a game title here"
           on />
         <CustomApiButton btnTitle={"Find Game"} className="game-submit-btn" 
