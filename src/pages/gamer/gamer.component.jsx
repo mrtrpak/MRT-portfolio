@@ -4,14 +4,12 @@ import './gamer.styles.scss';
 
 import { key } from '../../utils/secret';
 
-import GameData from '../../components/game-data/game-data.component';
+import GameSelector from '../../components/game-selector/game-selector.component';
 import CustomApiButton from '../../components/custom-api-button/custom-api-button.component';
 
 const GamerPage = () => {
   const [gameQuery, setGameQuery] = useState("");
-  const [gameData, setGameData] = useState({ gameData: []});
-  const [finalChoice, setFinalChoice] = useState(false);
-  const [call, setCall] = useState(0);
+  const [gamesData, setGamesData] = useState({ gamesData: []});
 
   const onChange = e => {
     const { value } = e.target;
@@ -20,23 +18,12 @@ const GamerPage = () => {
     setGameQuery(value ? removeSpaces.toLowerCase() : null);
   };
 
-  
   const fetchCall = () => { 
     fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
     .then(response => response.json())
-    .then(data => setGameData({ gameData: data.results }), getGameOptions())
-    .then(() => getGameOptions())
-    .catch(err => console.log(err));
-    setCall(call + 1);
-    console.log(call);
+    .then(data => setGamesData({ gamesData: data.results }))
+    .catch(err => err);
   };
-  
-  console.log(gameData);
-
-  const getGameOptions = () => {
-    gameData.gameData.slice(0, 10).map((game, idx) => {
-      return console.log(idx, game.name)}
-  )} 
 
   const onClick = () => {
     fetchCall();
@@ -54,11 +41,7 @@ const GamerPage = () => {
         title
       </h2>
       <div className="game-data-container">
-        {
-          !finalChoice ? 
-            <div id="game-options"></div>
-          : <GameData />
-        }
+        <GameSelector gamesData={gamesData} />
       </div>
       <div className="game-query">
         <input 
