@@ -38,7 +38,7 @@ const GamerPage = () => {
   return (
     <div className="gamer-page">
       <h2 className="gamer-page-title">
-        title
+        What Game Are You Looking For?
       </h2>
       <div className="game-data-container">
         <GameSelector gamesData={gamesData} />
