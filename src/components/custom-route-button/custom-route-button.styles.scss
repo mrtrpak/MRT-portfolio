@@ -12,8 +12,6 @@
     align-items: center;
     justify-content: center;
     
-    
-    
     .route-button-title {
       color: whitesmoke;
     }
@@ -22,14 +20,12 @@
   .route-button-icon-container {
     display: flex;
 
-    
     .route-button-icon {
       margin: auto 10px;
       display: none;
     }
   }
 }
-
 
 .custom-route-button::after {
   color: whitesmoke;
