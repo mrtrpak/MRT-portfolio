@@ -9,7 +9,7 @@
   color: whitesmoke;
   letter-spacing: 3px;
 
-.home-name {
+  .home-name {
     opacity: 1;
     font-size: 50px;
     animation-name: name-animation;
@@ -19,9 +19,9 @@
     .my-name {
       text-shadow: 5px 5px 3px black;
     }
-}
+  }
 
-@keyframes name-animation {
+  @keyframes name-animation {
     0% {
         opacity: 0;
         transform: translatex(60%);

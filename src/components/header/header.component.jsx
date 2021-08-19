@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 
-
 import './header.styles.scss';
 
 const Header = () => (

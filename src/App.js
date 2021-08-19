@@ -6,7 +6,6 @@ import './App.scss';
 import bgImage from './assets/mntsBG.jpg';
 
 import Header from './components/header/header.component';
-
 import HomePage from './pages/home/homepage.component';
 import HobbiesPage from './pages/hobbies/hobbies.component';
 import ProjectsPage from './pages/projects/projects.components';

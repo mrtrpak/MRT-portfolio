@@ -7,10 +7,10 @@ import CustomApiButton from '../../components/custom-api-button/custom-api-butto
 import SoccerKeyToggle from '../../components/soccer-key-toggle/soccer-key-toggle.component';
 
 const SoccerPage = () => {
-   const [league, setLeague] = useState({
-     title: "Deutsche Fußball-Bundesliga",
-     code: "BL1" 
-    });
+  const [league, setLeague] = useState({
+    title: "Deutsche Fußball-Bundesliga",
+    code: "BL1" 
+  });
 
   const { title, code } = league;
 

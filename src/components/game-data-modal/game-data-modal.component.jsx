@@ -7,14 +7,13 @@ const GameDataModal = props => {
   const { slug } = props;
 
   useEffect(() => {
-  })
+  });
   
   return (
     <div className="game-data-modal">
       <h4 className="game-data-title">title</h4>
-
     </div>
   );
-}
+};
 
 export default GameDataModal;

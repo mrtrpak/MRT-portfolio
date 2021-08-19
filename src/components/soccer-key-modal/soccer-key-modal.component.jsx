@@ -7,7 +7,7 @@ const SoccerKeyModal = () => {
     "POS: position", "GP: games played", "W: wins (3 points per)",
     "D: draws (1 point per)", "L: loses (0 points per)", "PTS: total points",
     "GF: goals for", "GA: goals against", "GD: goal differential"
-  ]
+  ];
   
   return (
     <div className="soccer-key-modal">
@@ -31,6 +31,6 @@ const SoccerKeyModal = () => {
       </p>
     </div>
   );
-}
+};
 
 export default SoccerKeyModal;

@@ -12,7 +12,7 @@ const GameSelector = props => {
 
   const gameChoiceClick = slug => {
     setGameSlug(slug);
-  }
+  };
 
   return (
     <div className="game-selector">

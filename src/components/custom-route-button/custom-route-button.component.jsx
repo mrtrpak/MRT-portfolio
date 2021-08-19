@@ -15,7 +15,6 @@ const CustomRouteButton = ({ route, title }) => (
       </span>
     </Link>
   </div>
-
 );
 
 export default CustomRouteButton;
