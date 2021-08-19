@@ -19,11 +19,11 @@ const HobbiesPage = () => (
       <div className="hobby">
         <h4 className="hobby-title">VIDEO GAME ENTHUSIAST</h4>
         <p className="hobby-text">
-          The scope and variety within video games and the overall growth
-          of video games is astounding. Using api.rawg.io I can see who is 
-          top dog in the video game world!
+          The scope and the overall growth of video games is astounding.
+          Using api.rawg.io I can quickly search to get detailed
+          information for a specific game!
         </p>
-        <CustomRouteButton title={"gamer"} route={"/gamer"} />
+        <CustomRouteButton title={"video game finder"} route={"/gamer"} />
       </div>
     </div>
   </div>

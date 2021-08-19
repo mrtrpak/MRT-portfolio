@@ -1,7 +1,6 @@
 .game-selector {
   width: 100%;
   height: 100%;
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,9 +13,19 @@
     align-items: center;
     cursor: pointer;
     
-    .game-name {
+    .game-option-name {
       font-size: 16px;
       margin-left: 10px;
+    }
+
+    @media screen and (min-width: 950px) {
+      .game-option-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .game-option-name {
+        font-size: 24px;
+      }
     }
   }
   

@@ -46,3 +46,18 @@
     }
   }
 }
+
+@media screen and (min-width: 950px) {
+  .gamer-page {
+    width: 1000px;
+    height: 650px;
+
+    .game-query {
+      height: 200px;
+      
+      .game-text {
+        font-size: 24px;
+      }
+    }
+  }
+}

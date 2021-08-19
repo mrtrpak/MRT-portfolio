@@ -1,13 +1,10 @@
 .game-data-modal {
-  width: 80vw;
-  height: 60vw;
+  width: 80%;
+  height: 60%;
   background-color: blue;
-  height: 300px;
-  width: 600px;
   position: fixed;
   z-index: 1;
   background-color: whitesmoke;
-  border: 5px solid black;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
   overflow: hidden;
   border-radius: 10px;
@@ -20,5 +17,13 @@
     color: whitesmoke;
     letter-spacing: 1px;
     box-shadow: 0 1px 5px black;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .game-data-modal {
+    width: 750px;
+    height: 500px;
+    margin-top: 5%;
   }
 }
