@@ -6,14 +6,15 @@ import './game-selector.styles.scss';
 import GameDataModal from '../game-data-modal/game-data-modal.component';
 
 const GameSelector = props => {
-  const [gameSlug, setGameSlug] = useState("");
+  const [finalChoice, setFinalChoice] = useState({});
 
   const { gamesData} = props.gamesData;
 
-  const gameChoiceClick = slug => {
-    setGameSlug(slug);
+  const gameChoiceClick = game => {
+    setFinalChoice(game)
   };
 
+  console.log(finalChoice);
   return (
     <div className="game-selector">
       {
@@ -23,12 +24,12 @@ const GameSelector = props => {
           return (
             <div className="game-option" key={idx}>
               <FaGamepad className="game-option-icon" />
-              <p className="game-option-name" onClick={() => gameChoiceClick(slug)}>{name}</p>
+              <p className="game-option-name" onClick={() => gameChoiceClick(game)}>{name}</p>
             </div>
           )
         })
       }
-      <GameDataModal slug={gameSlug} />
+      <GameDataModal finalChoice={finalChoice} />
     </div>
   );
 };

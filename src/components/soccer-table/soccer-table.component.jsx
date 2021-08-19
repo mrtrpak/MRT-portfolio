@@ -16,17 +16,17 @@ const SoccerTable = (props) => {
   useEffect(() => {
     setIsMounted(false);
 
-    const fetchData = async () => {
+    const fetchSoccerData = async () => {
       await fetch(
         `https://api.football-data.org/v2/competitions/${code}/standings`,
         { method: "GET",  headers: { "X-Auth-Token": soccerToken }})
         .then(response => response.json())
         .then(json => setStandingsInfo({ table: json.standings[0].table }))
         .catch(err => console.log(err));
-      };
-
-      fetchData();
+      }; 
+      fetchSoccerData();
       setIsMounted(true);
+      
   }, [code]);
 
   return (
