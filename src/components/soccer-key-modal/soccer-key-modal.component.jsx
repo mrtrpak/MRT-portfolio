@@ -12,7 +12,7 @@ const SoccerKeyModal = () => {
   return (
     <div className="soccer-key-modal">
       <h4 className="key-modal-title">
-        <span className="modal-title-text">SOCCER KEY</span>
+        <span className="key-title-text">SOCCER KEY</span>
       </h4>
       <ul className="headers-key-list">
         {

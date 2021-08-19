@@ -29,7 +29,7 @@ export const skills = [
       "problem-solver",
       "ability to lead",
       "organized",
-      "considerate of others"
+      "cultural awareness"
     ]
   }
 ];
