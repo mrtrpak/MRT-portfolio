@@ -3,7 +3,7 @@ import React from 'react';
 import './game-data-modal.styles.scss';
 
 const GameDataModal = () => (
-  <div>
+  <div className="game-data-modal">
     game data modal
   </div>
 );

@@ -3,10 +3,9 @@ import { FaGamepad } from 'react-icons/fa';
 
 import './game-selector.styles.scss';
 
-import { key } from '../../utils/secret';
+import GameDataModal from '../game-data-modal/game-data-modal.component';
 
 const GameSelector = props => {
-  const [isFinal, setIsFinal] = useState(false);
   const [gameSlug, setGameSlug] = useState("");
 
   const { gamesData} = props.gamesData;
@@ -29,6 +28,7 @@ const GameSelector = props => {
           )
         })
       }
+      <GameDataModal slug={gameSlug} />
     </div>
   );
 };
