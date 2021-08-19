@@ -6,12 +6,12 @@ import './custom-route-button.styles.scss';
 
 const CustomRouteButton = ({ route, title }) => (
   <div className="custom-route-button">
-    <Link to={route} className="custom-button-link">
-      <span className="custom-button-title">
+    <Link to={route} className="route-button-link">
+      <span className="route-button-title">
         {title.toUpperCase()}
       </span>
-      <span className="custom-button-icon-container">
-        <AiOutlineArrowRight className="custom-button-icon" />
+      <span className="route-button-icon-container">
+        <AiOutlineArrowRight className="route-button-icon" />
       </span>
     </Link>
   </div>

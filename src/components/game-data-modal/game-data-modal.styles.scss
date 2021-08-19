@@ -14,9 +14,11 @@
   margin-top: 10%;
 
   .game-data-title {
-    text-align: center;
     padding: 15px 0;
-    border-bottom: 1px solid black;
     margin-bottom: 15px;
+    background-color: forestgreen;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 5px black;
   }
 }
