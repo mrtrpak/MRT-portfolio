@@ -4,27 +4,29 @@ import YTSearch from 'youtube-api-search';
 import './game-data-modal.styles.scss';
 
 import { youtubeKey } from '../../utils/secret';
+import YoutubePlayer from '../youtube-player/youtube-player.component';
 
-const GameDataModal = props => {
+const GameDataModal = ({ finalChoice }) => {
   const [hidden, setHidden] = useState("hidden");
-
-  const { finalChoice } = props;
+  const [videoIdArray, setVideoIdArray] = useState([]);
   
   useEffect(() => {
+    
     if (Object.keys(finalChoice).length === 0) {
       setHidden("hidden");
-      console.log(finalChoice === true, "use effect test");
     } else {
       const { name } = finalChoice;
+
       const youtubeVideoSearch = () => {
         YTSearch({ key: youtubeKey, term: `${name} official trailer`}, 
-          videos => {
-            console.log(videos);
-          }
+          videos => { videos.map(video => (
+            setVideoIdArray(array => [...array, video.id.videoId])
+          ))}
         );
       };
 
       setHidden("");
+      setVideoIdArray([]);
       youtubeVideoSearch();
     }
   }, [finalChoice]);
@@ -32,6 +34,7 @@ const GameDataModal = props => {
   return (
     <div className="game-data-modal" hidden={hidden}>
       <h4 className="game-data-title">{finalChoice.name}</h4>
+      <YoutubePlayer videoIdArray={videoIdArray} />
     </div>
   );
 };
