@@ -24,7 +24,9 @@ const GameSelector = props => {
           return (
             <div className="game-option" key={idx}>
               <FaGamepad className="game-option-icon" />
-              <p className="game-option-name" onClick={() => gameChoiceClick(game)}>{name}</p>
+              <p className="game-option-name" onClick={() => gameChoiceClick(game)}>
+                {name}
+              </p>
             </div>
           )
         })
