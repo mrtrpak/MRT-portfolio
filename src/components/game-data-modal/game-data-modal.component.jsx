@@ -34,7 +34,15 @@ const GameDataModal = ({ finalChoice }) => {
   return (
     <div className="game-data-modal" hidden={hidden}>
       <h4 className="game-data-title">{finalChoice.name}</h4>
-      <YoutubePlayer videoIdArray={videoIdArray} />
+      <div className="player-and-ratings">
+        <YoutubePlayer videoIdArray={videoIdArray} />
+        <div className="game-ratings">
+
+        </div>
+      </div>
+      <div className="game-data-container">
+        
+      </div>
     </div>
   );
 };

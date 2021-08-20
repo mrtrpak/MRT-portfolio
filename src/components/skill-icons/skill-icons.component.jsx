@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaCss3Alt, FaBootstrap, FaFileWord } from 'react-icons/fa';
-import { IoLogoJavascript, IoLogoNodejs,  } from 'react-icons/io';
+import { IoLogoJavascript, IoLogoNodejs } from 'react-icons/io';
 import { SiMysql, SiMongodb, SiMaterialUi, SiHeroku, SiRedux, SiFirebase } from 'react-icons/si';
 import { DiJqueryUiLogo } from 'react-icons/di';
 
