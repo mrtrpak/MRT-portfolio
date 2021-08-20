@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './gamer.styles.scss';
 
-import { key } from '../../utils/secret';
+import { gameKey } from '../../utils/secret';
 
 import GameSelector from '../../components/game-selector/game-selector.component';
 import CustomApiButton from '../../components/custom-api-button/custom-api-button.component';
@@ -19,7 +19,7 @@ const GamerPage = () => {
   };
 
   const fetchCall = () => { 
-    fetch(`https://api.rawg.io/api/games?key=${key}&search=${gameQuery}`)
+    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
     .then(response => response.json())
     .then(data => setGamesData({ gamesData: data.results }))
     .catch(err => err);
