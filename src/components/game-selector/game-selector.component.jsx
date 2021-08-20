@@ -19,7 +19,7 @@ const GameSelector = props => {
     <div className="game-selector">
       {
         gamesData.slice(0, 10).map((game, idx) => {
-          const { slug, name } = game;
+          const { name } = game;
 
           return (
             <div className="game-option" key={idx}>
