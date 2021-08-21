@@ -30,18 +30,26 @@ const GameDataModal = ({ finalChoice }) => {
       youtubeVideoSearch();
     }
   }, [finalChoice]);
+
+  const { name, rating } = finalChoice;
   
   return (
     <div className="game-data-modal" hidden={hidden}>
-      <h4 className="game-data-title">{finalChoice.name}</h4>
+      <h4 className="game-data-title">{name}</h4>
       <div className="player-and-ratings">
         <YoutubePlayer videoIdArray={videoIdArray} />
         <div className="game-ratings">
+          <div className="esrb-rating">
 
+          </div>
+          <div className="game-rating">
+            <h4 className="game-rating-title">GAME RATING</h4>
+            <p className="game-rating-score">{rating}</p>
+          </div>
         </div>
       </div>
       <div className="game-data-container">
-        
+
       </div>
     </div>
   );
