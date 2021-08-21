@@ -35,7 +35,7 @@ const YoutubePlayer = ({ videoIdArray }) => {
         className="iframe" frameBorder="0" allowFullScreen
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       />
-      <div className="change-video">
+      <div className="change-video-container">
         <IoArrowUndo className="change-video-icon" id="back"
           onClick={() => videoChangeOnclick("back")} />
         <p className="change-video-text">CYCLE THRU VIDEOS</p>

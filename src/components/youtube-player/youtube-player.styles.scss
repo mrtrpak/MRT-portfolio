@@ -1,0 +1,23 @@
+.youtube-player {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .iframe {
+    width: auto;
+    height: auto;
+  }
+
+  .change-video-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .change-video-text {
+      font-size: 12px;
+    }
+  }
+}
