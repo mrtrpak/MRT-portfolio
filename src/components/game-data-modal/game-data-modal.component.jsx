@@ -31,7 +31,9 @@ const GameDataModal = ({ finalChoice }) => {
     }
   }, [finalChoice]);
 
-  const { name, rating } = finalChoice;
+  const { 
+    name, rating, background_image, released, score, esrb_rating, genres, platforms  
+  } = finalChoice;
   
   return (
     <div className="game-data-modal" hidden={hidden}>
