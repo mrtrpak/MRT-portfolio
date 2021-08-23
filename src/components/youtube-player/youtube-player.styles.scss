@@ -6,15 +6,25 @@
   align-items: center;
 
   .iframe {
-    width: auto;
+    width: 80%;
     height: auto;
   }
 
   .change-video-container {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: whitesmoke;
+    padding: 5px 0;
+
+    .change-video-icon {
+      transition: 0.5s;
+    }
+
+    .change-video-icon:hover {
+      transform: scale(1.1);
+    }
 
     .change-video-text {
       font-size: 12px;
