@@ -20,21 +20,21 @@ const GameDataModal = ({ finalChoice }) => {
   const [videoIdArray, setVideoIdArray] = useState([]);
   const [esrbSrc, setEsrbSrc] = useState(undefined);
   const [backgroundImage, setBackgroundImage] = useState(null);
-  const youtubeVideoSearch = () => {
-    YTSearch({ key: youtubeKey, term: `${name} official trailer`}, 
-      videos => { videos.map(video => (
-        setVideoIdArray(array => [...array, video.id.videoId])
-      ))}
-    );
-  };
-
-  youtubeVideoSearch();
 
   useEffect(() => {
     if (Object.keys(finalChoice).length === 0) {
       setHidden("hidden");
       setVideoIdArray([]);
     } else {
+      const youtubeVideoSearch = () => {
+        YTSearch({ key: youtubeKey, term: `${name} official trailer`}, 
+          videos => { videos.map(video => (
+            setVideoIdArray(array => [...array, video.id.videoId])
+          ))}
+        );
+      };
+    
+      youtubeVideoSearch();
       setHidden("");
     };
   }, [finalChoice]);
