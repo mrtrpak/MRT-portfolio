@@ -24,8 +24,12 @@
     justify-content: space-evenly;
     align-items: center;
 
-    .youtube-player-component {
-      width: 50%;
+    .game-rating{
+      background-color: whitesmoke;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 5px 0;
+      text-align: center;
     }
   }
 }

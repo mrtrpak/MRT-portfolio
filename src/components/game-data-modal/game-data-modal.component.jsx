@@ -65,14 +65,9 @@ const GameDataModal = ({ finalChoice }) => {
     }}>
       <h4 className="game-data-title">{name}</h4>
       <div className="player-and-ratings">
-        <YoutubePlayer videoIdArray={videoIdArray} className="youtube-player-component" />
+        <YoutubePlayer videoIdArray={videoIdArray} />
         <div className="game-ratings">
           <img src={everyone} alt="esrb rating" />
-          {
-            !esrbSrc ? null : 
-            <div className="esrb-rating">
-            </div>
-          }
           <div className="game-rating">
             <h4 className="game-rating-title">GAME RATING</h4>
             <p className="game-rating-score">{rating} / 5</p>
