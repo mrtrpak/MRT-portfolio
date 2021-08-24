@@ -13,17 +13,19 @@ import ratingPending from '../../assets/esrb-rating-images/rating-pending.png';
 import YoutubePlayer from '../youtube-player/youtube-player.component';
 
 const GameDataModal = ({ finalChoice }) => {
-  const { 
-    name, rating, background_image, released, score, genres, platforms  
-  } = finalChoice;
+  const { name, rating, background_image, released } = finalChoice;
   const [hidden, setHidden] = useState("hidden");
   const [videoIdArray, setVideoIdArray] = useState([]);
   const [esrbSrc, setEsrbSrc] = useState(null);
+  const [genreList, setGenreList] = useState([]);
+  const [platformList, setPlatformList] = useState([]);
 
   useEffect(() => {
     if (Object.keys(finalChoice).length === 0) {
       setHidden("hidden");
       setVideoIdArray([]);
+      setGenreList([]);
+      setPlatformList([]);
     } else {
       const youtubeVideoSearch = () => {
         YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
@@ -34,11 +36,12 @@ const GameDataModal = ({ finalChoice }) => {
       };
 
       const setEsrbImage = () => {
-        const ratingSlug = finalChoice.esrb_rating.slug;
-
-        if (!ratingSlug) {
+        
+        if (!finalChoice.esrb_rating) {
           return null;
         } else {
+          const ratingSlug = finalChoice.esrb_rating.slug;
+
           switch (ratingSlug) {
             case "everyone":
               setEsrbSrc(everyone);
@@ -60,32 +63,40 @@ const GameDataModal = ({ finalChoice }) => {
               break;
             default:
               return null;
-          }
-        }
+          };
+        };
+      };
+
+      const getGenreList = () => {
+        const genres = finalChoice.genres;
+
+        Object.entries(genres).map(genre => (
+          setGenreList(array => [...array, genre[1].name])
+        ));
+      };
+
+      const getPlatformList = () => {
+        const platforms = finalChoice.platforms;
+
+        Object.entries(platforms).map(platform => (
+          setPlatformList(array => [...array, platform[1].platform.name])
+        ))
+        
       }
-    
+
+      
       youtubeVideoSearch();
       setEsrbImage();
+      getGenreList();
+      getPlatformList();
       setHidden("");
+
     };
   }, [finalChoice]);
-
-  // if (!esrb_rating) {
-  //   setEsrbSrc(null);
-  // } else if (esrb_rating.slug === "everyone") {
-  //   setEsrbSrc(everyone);
-  // } else if (esrb_rating.slug === "everyone-10-plus") {
-  //   setEsrbSrc(everyone10);
-  // } else if (esrb_rating.slug === "teen") {
-  //   setEsrbSrc(teen);
-  // } else if (esrb_rating.slug === "mature") {
-  //   setEsrbSrc(mature);
-  // } else if (esrb_rating.slug === "adults-only") {
-  //   setEsrbSrc(adultsOnly);
-  // } else if (esrb_rating.slug === "rating-pending") {
-  //   setEsrbSrc(ratingPending);
-  // }
   
+  console.log(genreList, "list");
+  console.log( platformList, "plat list");
+
   return (
     <div className="game-data-modal" hidden={hidden} style={{
       backgroundImage: `url(${background_image})`,

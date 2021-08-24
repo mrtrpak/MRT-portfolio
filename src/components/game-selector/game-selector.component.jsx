@@ -13,8 +13,7 @@ const GameSelector = props => {
   const gameChoiceClick = game => {
     setFinalChoice(game)
   };
-
-  console.log(finalChoice);
+  
   return (
     <div className="game-selector">
       {
