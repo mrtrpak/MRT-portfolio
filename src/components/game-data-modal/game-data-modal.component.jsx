@@ -81,11 +81,9 @@ const GameDataModal = ({ finalChoice }) => {
 
         Object.entries(platforms).map(platform => (
           setPlatformList(array => [...array, platform[1].platform.name])
-        ))
-        
-      }
+        ));
+      };
 
-      
       youtubeVideoSearch();
       setEsrbImage();
       getGenreList();
@@ -94,9 +92,6 @@ const GameDataModal = ({ finalChoice }) => {
 
     };
   }, [finalChoice]);
-  
-  console.log(genreList, "list");
-  console.log( platformList, "plat list");
 
   return (
     <div className="game-data-modal" hidden={hidden} style={{
@@ -119,7 +114,24 @@ const GameDataModal = ({ finalChoice }) => {
         </div>
       </div>
       <div className="game-data-container">
-
+        <div className="game-released">
+          <h4 className="game-released-title">RELEASED</h4>
+          <p className="released-data">{released}</p>
+        </div>
+        <div className="genre-and-platform-container">
+          <p className="list-data-title">
+            <span className="genre-title">Genres: </span>
+            {
+              genreList.toString().split(",").join(", ")
+            }
+          </p>
+          <p className="platform-list-data">
+            <span className="list-data-title">Platforms: </span>
+            {
+              platformList.toString().split(",").join(", ")
+            }
+          </p>
+        </div>
       </div>
     </div>
   );
