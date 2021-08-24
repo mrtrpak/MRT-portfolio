@@ -23,10 +23,11 @@ const GameDataModal = ({ finalChoice }) => {
   useEffect(() => {
     if (Object.keys(finalChoice).length === 0) {
       setHidden("hidden");
+    } else {
       setVideoIdArray([]);
       setGenreList([]);
       setPlatformList([]);
-    } else {
+
       const youtubeVideoSearch = () => {
         YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (
