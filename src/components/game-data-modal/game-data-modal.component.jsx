@@ -27,7 +27,7 @@ const GameDataModal = ({ finalChoice }) => {
       setVideoIdArray([]);
     } else {
       const youtubeVideoSearch = () => {
-        YTSearch({ key: youtubeKey, term: `${name} official trailer`}, 
+        YTSearch({ key: youtubeKey, term: `${name} official video game trailer`}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])
           ))}

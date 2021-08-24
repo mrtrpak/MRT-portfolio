@@ -33,7 +33,7 @@ const YoutubePlayer = ({ videoIdArray }) => {
       <iframe 
         src={`https://www.youtube.com/embed/${videoId}`} title="embedded game trailers"
         className="iframe" frameBorder="0" allowFullScreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       />
       <div className="change-video-container">
         <IoArrowUndo className="change-video-icon" id="back"
