@@ -19,7 +19,6 @@ const GameDataModal = ({ finalChoice }) => {
   const [hidden, setHidden] = useState("hidden");
   const [videoIdArray, setVideoIdArray] = useState([]);
   const [esrbSrc, setEsrbSrc] = useState(undefined);
-  const [gameBackgroundImage, setGameBackgroundImage] = useState(null);
 
   useEffect(() => {
     if (Object.keys(finalChoice).length === 0) {
@@ -36,7 +35,6 @@ const GameDataModal = ({ finalChoice }) => {
     
       youtubeVideoSearch();
       setHidden("");
-      setGameBackgroundImage(background_image);
     };
   }, [finalChoice]);
 
@@ -58,14 +56,14 @@ const GameDataModal = ({ finalChoice }) => {
   
   return (
     <div className="game-data-modal" hidden={hidden} style={{
-      backgroundImage: `url(${gameBackgroundImage})`,
+      backgroundImage: `url(${background_image})`,
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
       backgroundPosition: "center"
     }}>
       <h4 className="game-data-title">{name}</h4>
       <div className="player-and-ratings">
-        <YoutubePlayer videoIdArray={videoIdArray} className="youtube-player-comp" />
+        <YoutubePlayer videoIdArray={videoIdArray} />
         <div className="game-ratings">
           <img src={everyone} alt="esrb rating" />
           <div className="game-rating">

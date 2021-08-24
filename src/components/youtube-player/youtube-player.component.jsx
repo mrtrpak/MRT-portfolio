@@ -4,7 +4,7 @@ import { IoArrowUndo, IoArrowRedo } from 'react-icons/io5';
 import './youtube-player.styles.scss';
 
 const YoutubePlayer = ({ videoIdArray }) => {
-  const [index, setIndex] = useState();
+  const [index, setIndex] = useState(0);
   const id = videoIdArray[index];
   const [videoId, setVideoId] = useState(id);
 
