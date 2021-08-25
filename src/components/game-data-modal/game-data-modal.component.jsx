@@ -29,11 +29,19 @@ const GameDataModal = ({ finalChoice }) => {
       setPlatformList([]);
 
       const youtubeVideoSearch = () => {
-        YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
+        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+          YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])
           ))}
         );
+        } else if (process.env.NODE_ENV === 'production') {
+          YTSearch({ key: process.env.youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
+          videos => { videos.map(video => (
+            setVideoIdArray(array => [...array, video.id.videoId])
+          ))}
+        );
+        };
       };
 
       const setEsrbImage = () => {

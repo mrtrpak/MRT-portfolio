@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 
 import './soccer-table.styles.scss';
 
-import { soccerToken } from '../../utils/secret';
+import { soccerKey } from '../../utils/secret';
 
 import SoccerTableHeaders from '../soccer-table-headers/soccer-table-headers.component';
 
@@ -17,13 +17,23 @@ const SoccerTable = (props) => {
     setIsMounted(false);
 
     const fetchSoccerData = async () => {
-      await fetch(
-        `https://api.football-data.org/v2/competitions/${code}/standings`,
-        { method: "GET",  headers: { "X-Auth-Token": soccerToken }})
-        .then(response => response.json())
-        .then(json => setStandingsInfo({ table: json.standings[0].table }))
-        .catch(err => console.log(err));
-      }; 
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        await fetch(
+          `https://api.football-data.org/v2/competitions/${code}/standings`,
+          { method: "GET",  headers: { "X-Auth-Token": soccerKey }})
+          .then(response => response.json())
+          .then(json => setStandingsInfo({ table: json.standings[0].table }))
+          .catch(err => console.log(err));
+        } else if (process.env.NODE_ENV === 'production') {
+          await fetch(
+            `https://api.football-data.org/v2/competitions/${code}/standings`,
+            { method: "GET",  headers: { "X-Auth-Token": process.env.soccerKey }})
+            .then(response => response.json())
+            .then(json => setStandingsInfo({ table: json.standings[0].table }))
+            .catch(err => console.log(err));
+        }
+      };
+      
       fetchSoccerData();
       setIsMounted(true);
       
