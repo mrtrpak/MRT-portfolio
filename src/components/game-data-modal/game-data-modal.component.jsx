@@ -115,7 +115,7 @@ const GameDataModal = ({ finalChoice }) => {
       </div>
       <div className="game-data-container">
         <div className="list-data">
-          <span className="data-title">Genres </span>
+          <span className="data-title">GENRES </span>
           <p>
             {
               genreList.toString().split(",").join(", ")
@@ -124,10 +124,10 @@ const GameDataModal = ({ finalChoice }) => {
         </div>
         <div className="game-released">
           <h4 className="game-released-title">RELEASED</h4>
-          <p className>{released}</p>
+          <p className="game-released-date">{released}</p>
         </div>
         <div className="list-data">
-          <span className="data-title">Platforms </span>
+          <span className="data-title">PLATFORMS </span>
           <p>
             {
               platformList.toString().split(",").join(", ")
