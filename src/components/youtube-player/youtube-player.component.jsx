@@ -7,6 +7,7 @@ const YoutubePlayer = ({ videoIdArray }) => {
   const [index, setIndex] = useState(0);
   const id = videoIdArray[index];
   const [videoId, setVideoId] = useState(id);
+  const [height, setHeight] = useState();
 
   const videoChangeOnclick = direction => {
     if (direction === "back") {
@@ -30,11 +31,13 @@ const YoutubePlayer = ({ videoIdArray }) => {
 
   useEffect(() => {
     setVideoId(videoIdArray[0]);
+    const width = window.innerWidth;
+    width < 950 ? setHeight("225px") : setHeight("300px");
   }, [videoIdArray]);
 
   return (
     <div className="youtube-player">
-      <iframe 
+      <iframe style={{ height: height}}
         src={`https://www.youtube.com/embed/${videoId}`} title="embedded game trailers"
         className="iframe" frameBorder="0" allowFullScreen
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
