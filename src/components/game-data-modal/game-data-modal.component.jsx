@@ -124,7 +124,7 @@ const GameDataModal = ({ finalChoice }) => {
         </div>
         <div className="game-released">
           <h4 className="game-released-title">RELEASED</h4>
-          <p className="released-data">{released}</p>
+          <p className>{released}</p>
         </div>
         <div className="list-data">
           <span className="data-title">Platforms </span>
