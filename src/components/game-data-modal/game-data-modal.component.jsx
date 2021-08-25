@@ -3,7 +3,6 @@ import YTSearch from 'youtube-api-search';
 
 import './game-data-modal.styles.scss';
 
-import { youtubeKey } from '../../utils/secret';
 import everyone from '../../assets/esrb-rating-images/everyone.png';
 import everyone10 from '../../assets/esrb-rating-images/everyone10+.png';
 import teen from '../../assets/esrb-rating-images/teen.png';
@@ -19,7 +18,7 @@ const GameDataModal = ({ finalChoice }) => {
   const [esrbSrc, setEsrbSrc] = useState(null);
   const [genreList, setGenreList] = useState([]);
   const [platformList, setPlatformList] = useState([]);
-
+  
   useEffect(() => {
     if (Object.keys(finalChoice).length === 0) {
       setHidden("hidden");
@@ -27,21 +26,15 @@ const GameDataModal = ({ finalChoice }) => {
       setVideoIdArray([]);
       setGenreList([]);
       setPlatformList([]);
-
+      
       const youtubeVideoSearch = () => {
-        if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        const { youtubeKey } = require('../../utils/secret') || process.env.youtubeKey;
+        
           YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])
           ))}
         );
-        } else if (process.env.NODE_ENV === 'production') {
-          YTSearch({ key: process.env.youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
-          videos => { videos.map(video => (
-            setVideoIdArray(array => [...array, video.id.videoId])
-          ))}
-        );
-        };
       };
 
       const setEsrbImage = () => {

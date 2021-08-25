@@ -129,8 +129,11 @@
   }
 
   @media screen and (min-width: 950px) {
-    margin-top: 15px;
-  }
+    .game-data-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  } 
 }
 
 @media screen and (min-width: 950px) {

@@ -32,7 +32,7 @@ const YoutubePlayer = ({ videoIdArray }) => {
   useEffect(() => {
     setVideoId(videoIdArray[0]);
     const width = window.innerWidth;
-    width < 950 ? setHeight("225px") : setHeight("300px");
+    width < 950 ? setHeight("200px") : setHeight("250px");
   }, [videoIdArray]);
 
   return (

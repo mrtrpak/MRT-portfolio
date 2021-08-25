@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 import './gamer.styles.scss';
 
-import { gameKey } from '../../utils/secret';
-
 import GameSelector from '../../components/game-selector/game-selector.component';
 import CustomApiButton from '../../components/custom-api-button/custom-api-button.component';
 
@@ -19,17 +17,12 @@ const GamerPage = () => {
   };
 
   const fetchCall = () => { 
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
-      .then(response => response.json())
-      .then(data => setGamesData({ gamesData: data.results }))
-      .catch(err => err);
-    } else if (process.env.NODE_ENV === 'production') {
-      fetch(`https://api.rawg.io/api/games?key=${process.env.gameKey}&search=${gameQuery}`)
+    const { gameKey } = require('../../utils/secret') || process.env.gameKey;
+    
+    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
     .then(response => response.json())
     .then(data => setGamesData({ gamesData: data.results }))
     .catch(err => err);
-    }
   };
 
   const onClick = () => {
