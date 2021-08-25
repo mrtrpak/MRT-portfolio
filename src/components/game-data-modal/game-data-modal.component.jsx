@@ -28,7 +28,12 @@ const GameDataModal = ({ finalChoice }) => {
       setPlatformList([]);
       
       const youtubeVideoSearch = () => {
-        const { youtubeKey } = process.env.youtubeKey || require('../../utils/secret');
+        let youtubeKey = '';
+      if (process.env.NODE_ENV === 'development') {
+        youtubeKey  = require('../../utils/secret/soccerKey');
+      } else if (process.env.NODE_ENV === 'production') {
+        youtubeKey = process.env.soccerKey;
+      }
 
           YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (

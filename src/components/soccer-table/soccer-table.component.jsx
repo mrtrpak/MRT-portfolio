@@ -15,7 +15,12 @@ const SoccerTable = (props) => {
     setIsMounted(false);
     
     const fetchSoccerData = async () => {
-      const { soccerKey } = process.env.soccerKey || require('../../utils/secret');
+      let soccerKey = '';
+      if (process.env.NODE_ENV === 'development') {
+        soccerKey  = require('../../utils/secret/soccerKey');
+      } else if (process.env.NODE_ENV === 'production') {
+        soccerKey = process.env.soccerKey;
+      }
 
       await fetch(
         `https://api.football-data.org/v2/competitions/${code}/standings`,

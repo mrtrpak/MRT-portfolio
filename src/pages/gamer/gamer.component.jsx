@@ -17,7 +17,12 @@ const GamerPage = () => {
   };
 
   const fetchCall = () => { 
-    const { gameKey } = process.env.gameKey || require('../../utils/secret');
+    let gameKey = '';
+      if (process.env.NODE_ENV === 'development') {
+        gameKey  = require('../../utils/secret/soccerKey');
+      } else if (process.env.NODE_ENV === 'production') {
+        gameKey = process.env.soccerKey;
+      }
     
     fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
     .then(response => response.json())
