@@ -105,7 +105,7 @@ const GameDataModal = ({ finalChoice }) => {
         <YoutubePlayer videoIdArray={videoIdArray} />
         <div className="game-ratings">
           {
-            !esrbSrc ? null : <img src={esrbSrc} alt="esrb rating" />
+            !esrbSrc ? null : <img src={esrbSrc} alt="esrb rating" className="esrb-image" />
           }
           <div className="game-rating">
             <h4 className="game-rating-title">GAME RATING</h4>
@@ -118,15 +118,17 @@ const GameDataModal = ({ finalChoice }) => {
           <h4 className="game-released-title">RELEASED</h4>
           <p className="released-data">{released}</p>
         </div>
-        <div className="genre-and-platform-container">
-          <p className="list-data-title">
-            <span className="genre-title">Genres: </span>
+        <div className="list-data">
+          <p className="genre-data-">
+            <span className="data-title">Genres: </span>
             {
               genreList.toString().split(",").join(", ")
             }
           </p>
-          <p className="platform-list-data">
-            <span className="list-data-title">Platforms: </span>
+        </div>
+        <div className="list-data">
+          <p className="platform-data">
+            <span className="data-title">Platforms: </span>
             {
               platformList.toString().split(",").join(", ")
             }
