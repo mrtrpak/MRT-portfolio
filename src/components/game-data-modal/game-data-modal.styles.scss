@@ -13,11 +13,17 @@
   .game-data-title {
     text-align: center;
     padding: 15px 0;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     background-color: forestgreen;
     color: whitesmoke;
     letter-spacing: 1px;
     box-shadow: 0 1px 5px black;
+  }
+
+  @media screen and (min-width: 950px) {
+    .game-data-title {
+      margin-bottom: 15px;
+    }
   }
 
   .player-and-ratings {
@@ -40,7 +46,7 @@
 
       @media screen and (min-width: 950px) {
         .esrb-image {
-          width: max-content;
+          width: 100%;
         }
       }
       
@@ -66,14 +72,15 @@
   }
 
   .game-data-container {
-    padding-top: 15px;
+    padding-top: 50px;
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
 
     .list-data {
       background-color: whitesmoke;
-      padding: 5px;
+      padding: 5px 3px;
+      font-size: 12px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
       border-radius: 10px;
       display: flex;
@@ -89,8 +96,15 @@
       }
     }
 
+    @media screen and (min-width: 950px) {
+      .list-data {
+        font-size: 16px;
+      }
+    }
+
     .game-released {
       background-color: whitesmoke;
+      font-size: 12px;
       padding: 5px;
       display: flex;
       flex-direction: column;
@@ -99,14 +113,23 @@
       text-align: center;
       box-shadow: 0 0 20px rgba(0, 0, 0, 1), 0px 0px 10px rgba(0, 0, 0, 1);
       border-radius: 10px;
-      overflow: hidden;
 
-      .game-released-title {
+      .data-title {
         font-weight: bolder;
         font-size: larger;
         border-bottom: 1px solid black;
       }
     }
+
+    @media screen and (min-width: 950px)  {
+      .game-released {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    margin-top: 15px;
   }
 }
 

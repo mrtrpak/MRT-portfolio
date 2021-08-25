@@ -19,10 +19,17 @@ const GamerPage = () => {
   };
 
   const fetchCall = () => { 
-    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
+      .then(response => response.json())
+      .then(data => setGamesData({ gamesData: data.results }))
+      .catch(err => err);
+    } else if (process.env.NODE_ENV === 'production') {
+      fetch(`https://api.rawg.io/api/games?key=${process.env.gameKey}&search=${gameQuery}`)
     .then(response => response.json())
     .then(data => setGamesData({ gamesData: data.results }))
     .catch(err => err);
+    }
   };
 
   const onClick = () => {
