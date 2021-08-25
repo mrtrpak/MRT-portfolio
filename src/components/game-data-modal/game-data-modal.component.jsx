@@ -28,8 +28,8 @@ const GameDataModal = ({ finalChoice }) => {
       setPlatformList([]);
       
       const youtubeVideoSearch = () => {
-        const { youtubeKey } = require('../../utils/secret') || process.env.youtubeKey;
-        
+        const { youtubeKey } = process.env.youtubeKey || require('../../utils/secret');
+
           YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])

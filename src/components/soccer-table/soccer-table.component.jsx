@@ -15,8 +15,8 @@ const SoccerTable = (props) => {
     setIsMounted(false);
     
     const fetchSoccerData = async () => {
-      const { soccerKey } = require('../../utils/secret') || process.env.soccerKey;
-      
+      const { soccerKey } = process.env.soccerKey || require('../../utils/secret');
+
       await fetch(
         `https://api.football-data.org/v2/competitions/${code}/standings`,
         { method: "GET",  headers: { "X-Auth-Token": soccerKey }})
