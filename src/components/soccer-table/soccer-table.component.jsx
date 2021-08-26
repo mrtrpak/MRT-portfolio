@@ -28,8 +28,7 @@ const SoccerTable = (props) => {
       } else if (process.env.NODE_ENV === 'production') {
         fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
           { 
-            method: "GET",  
-            mode: 'no-cors',
+            method: "GET",
             headers: { "X-Auth-Token": process.env.soccerKey }
           })
           .then(response => response.json())
@@ -52,7 +51,7 @@ const SoccerTable = (props) => {
             Object.entries(standingsInfo.table).map((team, idx) => {
               const { name, crestUrl } = team[1].team;
               const { 
-                position, gamesPlayed, won, draw, lost, points,
+                position, playedGames, won, draw, lost, points,
                 goalsFor, goalsAgainst, goalDifference
               } = team[1];
 
@@ -63,7 +62,7 @@ const SoccerTable = (props) => {
                   <td className="data">
                     <img className="crestUrl" src={crestUrl} alt="team logo" />
                   </td>
-                  <td className="data">{gamesPlayed}</td>
+                  <td className="data">{playedGames}</td>
                   <td className="data">{won}</td>
                   <td className="data">{draw}</td>
                   <td className="data">{lost}</td>
