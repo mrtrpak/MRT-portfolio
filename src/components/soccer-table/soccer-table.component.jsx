@@ -24,7 +24,12 @@ const SoccerTable = (props) => {
 
       await fetch(
         `https://api.football-data.org/v2/competitions/${code}/standings`,
-        { method: "GET",  headers: { "X-Auth-Token": soccerKey }})
+        { method: "GET",  
+        headers: { 
+          "X-Auth-Token": soccerKey,
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://mrt-portfolio.herokuapp.com' 
+        }})
         .then(response => response.json())
         .then(json => setStandingsInfo({ table: json.standings[0].table }))
         .catch(err => console.log(err));

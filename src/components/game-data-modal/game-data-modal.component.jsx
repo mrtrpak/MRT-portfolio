@@ -29,13 +29,15 @@ const GameDataModal = ({ finalChoice }) => {
       
       const youtubeVideoSearch = () => {
         let youtubeKey = '';
-      if (process.env.NODE_ENV === 'development') {
-        youtubeKey  = require('../../utils/secret/soccerKey');
-      } else if (process.env.NODE_ENV === 'production') {
-        youtubeKey = process.env.soccerKey;
-      }
-
-          YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
+        if (process.env.NODE_ENV === 'development') {
+          youtubeKey  = require('../../utils/secret/soccerKey');
+        } else if (process.env.NODE_ENV === 'production') {
+          youtubeKey = process.env.soccerKey;
+        }
+        YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`, headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': 'https://mrt-portfolio.herokuapp.com'
+        }}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])
           ))}

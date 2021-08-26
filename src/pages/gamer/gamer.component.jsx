@@ -24,7 +24,12 @@ const GamerPage = () => {
         gameKey = process.env.soccerKey;
       }
     
-    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
+    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': 'https://mrt-portfolio.herokuapp.com'
+      }
+    })
     .then(response => response.json())
     .then(data => setGamesData({ gamesData: data.results }))
     .catch(err => err);
