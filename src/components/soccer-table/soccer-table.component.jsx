@@ -2,7 +2,6 @@ import React, {useState, useEffect } from 'react';
 
 import './soccer-table.styles.scss';
 
-import { soccerKey } from '../../utils/secret';
 import SoccerTableHeaders from '../soccer-table-headers/soccer-table-headers.component';
 
 const SoccerTable = (props) => {
@@ -16,10 +15,11 @@ const SoccerTable = (props) => {
     
     const fetchSoccerData = () => {
       if (process.env.NODE_ENV === 'development') {
+        let {soccerKey } = require('../../utils/secret');
+
         fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
           { 
-            method: "GET",  
-            // mode: 'no-cors',
+            method: "GET",
             headers: { "X-Auth-Token": soccerKey }
           })
           .then(response => response.json())
