@@ -24,12 +24,7 @@ const GamerPage = () => {
         gameKey = process.env.soccerKey;
       }
     
-    fetch(`https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'https://mrt-portfolio.herokuapp.com'
-      }
-    })
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
     .then(response => response.json())
     .then(data => setGamesData({ gamesData: data.results }))
     .catch(err => err);

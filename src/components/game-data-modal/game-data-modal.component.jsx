@@ -34,10 +34,7 @@ const GameDataModal = ({ finalChoice }) => {
         } else if (process.env.NODE_ENV === 'production') {
           youtubeKey = process.env.soccerKey;
         }
-        YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`, headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'https://mrt-portfolio.herokuapp.com'
-        }}, 
+        YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
           videos => { videos.map(video => (
             setVideoIdArray(array => [...array, video.id.videoId])
           ))}
