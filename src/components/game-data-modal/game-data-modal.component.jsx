@@ -28,17 +28,16 @@ const GameDataModal = ({ finalChoice }) => {
       setPlatformList([]);
       
       const youtubeVideoSearch = () => {
-        let youtubeKey = '';
-        if (process.env.NODE_ENV === 'development') {
-          youtubeKey  = require('../../utils/secret/soccerKey');
-        } else if (process.env.NODE_ENV === 'production') {
-          youtubeKey = process.env.soccerKey;
-        }
-        YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
-          videos => { videos.map(video => (
-            setVideoIdArray(array => [...array, video.id.videoId])
-          ))}
-        );
+        // if (process.env.NODE_ENV === 'development') {
+        //  let { youtubeKey }  = require('../../utils/secret');
+        // } else if (process.env.NODE_ENV === 'production') {
+        //   let youtubeKey = process.env.soccerKey;
+        // }
+        // YTSearch({ key: youtubeKey, term: `${finalChoice.name} official video game trailer`}, 
+        //   videos => { videos.map(video => (
+        //     setVideoIdArray(array => [...array, video.id.videoId])
+        //   ))}
+        // );
       };
 
       const setEsrbImage = () => {

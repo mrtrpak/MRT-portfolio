@@ -17,17 +17,16 @@ const GamerPage = () => {
   };
 
   const fetchCall = () => { 
-    let gameKey = '';
-      if (process.env.NODE_ENV === 'development') {
-        gameKey  = require('../../utils/secret/soccerKey');
-      } else if (process.env.NODE_ENV === 'production') {
-        gameKey = process.env.soccerKey;
-      }
+    //   if (process.env.NODE_ENV === 'development') {
+    //     let { gameKey }  = require('../../utils/secret');
+    //   } else if (process.env.NODE_ENV === 'production') {
+    //     let gameKey = process.env.soccerKey;
+    //   }
     
-    fetch(`https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
-    .then(response => response.json())
-    .then(data => setGamesData({ gamesData: data.results }))
-    .catch(err => err);
+    // fetch(`https://cors-anywhere.herokuapp.com/https://api.rawg.io/api/games?key=${gameKey}&search=${gameQuery}`)
+    // .then(response => response.json())
+    // .then(data => setGamesData({ gamesData: data.results }))
+    // .catch(err => err);
   };
 
   const onClick = () => {

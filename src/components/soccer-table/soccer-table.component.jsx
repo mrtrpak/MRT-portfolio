@@ -2,11 +2,11 @@ import React, {useState, useEffect } from 'react';
 
 import './soccer-table.styles.scss';
 
+import { soccerKey } from '../../utils/secret';
 import SoccerTableHeaders from '../soccer-table-headers/soccer-table-headers.component';
 
 const SoccerTable = (props) => {
   const { code } = props;
-  
   
   const [standingsInfo, setStandingsInfo] = useState({ table: {}});
   const [isMounted, setIsMounted] = useState(false); 
@@ -14,28 +14,32 @@ const SoccerTable = (props) => {
   useEffect(() => {
     setIsMounted(false);
     
-    const fetchSoccerData = async () => {
-      let soccerKey = '';
+    const fetchSoccerData = () => {
       if (process.env.NODE_ENV === 'development') {
-        soccerKey  = require('../../utils/secret/soccerKey');
+        fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
+          { 
+            method: "GET",  
+            // mode: 'no-cors',
+            headers: { "X-Auth-Token": soccerKey }
+          })
+          .then(response => response.json())
+          .then(json => setStandingsInfo({ table: json.standings[0].table }))
+          .catch(err => console.log(err));
       } else if (process.env.NODE_ENV === 'production') {
-        soccerKey = process.env.soccerKey;
+        fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
+          { 
+            method: "GET",  
+            mode: 'no-cors',
+            headers: { "X-Auth-Token": process.env.soccerKey }
+          })
+          .then(response => response.json())
+          .then(json => setStandingsInfo({ table: json.standings[0].table }))
+          .catch(err => console.log(err));
       }
-
-      await fetch(
-        `https://cors-anywhere.herokuapp.com/https://api.football-data.org/v2/competitions/${code}/standings`,
-        { method: "GET",  
-        headers: { 
-          "X-Auth-Token": soccerKey,
-           
-        }})
-        .then(response => response.json())
-        .then(json => setStandingsInfo({ table: json.standings[0].table }))
-        .catch(err => console.log(err));
     };
       
-      fetchSoccerData();
-      setIsMounted(true);
+    fetchSoccerData();
+    setIsMounted(true);
       
   }, [code]);
 
