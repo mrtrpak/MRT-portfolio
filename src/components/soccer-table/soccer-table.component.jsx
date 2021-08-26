@@ -26,7 +26,7 @@ const SoccerTable = (props) => {
           .then(json => setStandingsInfo({ table: json.standings[0].table }))
           .catch(err => console.log(err));
       } else if (process.env.NODE_ENV === 'production') {
-        fetch(`/competitions/${code}/standings`,
+        fetch(`/${code}/standings`,
           { 
             method: "GET",
             headers: { "X-Auth-Token": process.env.soccerKey }
