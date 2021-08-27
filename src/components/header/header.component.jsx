@@ -8,7 +8,7 @@ const Header = () => (
   <div className="header">
     <div className="options">
       <Link className="option" to="/">HOME</Link>
-      <Link className="option" to="/hobbies">HOBBIES</Link>
+      {/* <Link className="option" to="/hobbies">HOBBIES</Link> */}
       <Link className="option" to="/projects">PROJECTS</Link>
       <Link className="option" to="skills">SKILLS</Link>
       <a className="option option-icon" href="https://github.com/mrtrpak">

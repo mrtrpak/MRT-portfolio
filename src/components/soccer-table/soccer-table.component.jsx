@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 
 import './soccer-table.styles.scss';
 
+import API from '../../utils/API';
 import SoccerTableHeaders from '../soccer-table-headers/soccer-table-headers.component';
 
 const SoccerTable = (props) => {
@@ -14,27 +15,30 @@ const SoccerTable = (props) => {
     setIsMounted(false);
     
     const fetchSoccerData = () => {
-      if (process.env.NODE_ENV === 'development') {
-        let {soccerKey } = require('../../utils/secret');
+      API.getStandings(code)
+      .then(res => console.log(res, "axios call"));
 
-        fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
-          { 
-            method: "GET",
-            headers: { "X-Auth-Token": soccerKey }
-          })
-          .then(response => response.json())
-          .then(json => setStandingsInfo({ table: json.standings[0].table }))
-          .catch(err => console.log(err));
-      } else if (process.env.NODE_ENV === 'production') {
-        fetch(`/${code}/standings`,
-          { 
-            method: "GET",
-            headers: { "X-Auth-Token": process.env.soccerKey }
-          })
-          .then(response => response.json())
-          .then(json => setStandingsInfo({ table: json.standings[0].table }))
-          .catch(err => console.log(err));
-      }
+      // if (process.env.NODE_ENV === 'development') {
+      //   let {soccerKey } = require('../../utils/secret');
+
+      //   fetch(`https://api.football-data.org/v2/competitions/${code}/standings`,
+      //     { 
+      //       method: "GET",
+      //       headers: { "X-Auth-Token": soccerKey }
+      //     })
+      //     .then(response => response.json())
+      //     .then(json => setStandingsInfo({ table: json.standings[0].table }))
+      //     .catch(err => console.log(err));
+      // } else if (process.env.NODE_ENV === 'production') {
+      //   fetch(`/${code}/standings`,
+      //     { 
+      //       method: "GET",
+      //       headers: { "X-Auth-Token": process.env.soccerKey }
+      //     })
+      //     .then(response => response.json())
+      //     .then(json => setStandingsInfo({ table: json.standings[0].table }))
+      //     .catch(err => console.log(err));
+      // }
     };
       
     fetchSoccerData();

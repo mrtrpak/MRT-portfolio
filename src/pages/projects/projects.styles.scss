@@ -71,6 +71,12 @@
       .project-link {
         cursor: pointer;
         color: whitesmoke;
+        transition: all .2s;
+      }
+
+      .project-link:hover {
+        text-shadow: 3px 1px 1px black;
+        font-size: large;
       }
     }
   }

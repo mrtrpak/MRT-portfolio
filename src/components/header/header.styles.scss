@@ -19,7 +19,14 @@
     .option {
       margin: auto 1vw;
       color: whitesmoke;
+      transition: all 0.2s;
     }
+
+    .option:hover {
+      transform: scale(1.1);
+      text-shadow: 3px 3px 1px black;
+    }
+
 
     .option-icon {
       display: flex;
