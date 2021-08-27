@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API = {
   getStandings: code => {
-    const KEYS = require("./secret") || null;
+    // const KEYS = require("./secret") || null;
     return axios.request({
       url: `https://api.football-data.org/v2/competitions/${code}/standings`,
       method: "get",
