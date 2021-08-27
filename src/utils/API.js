@@ -7,7 +7,7 @@ const API = {
       url: `https://api.football-data.org/v2/competitions/${code}/standings`,
       method: "get",
       headers: { 
-        "X-Auth-Token": process.env.soccerKey || KEYS.soccerKey,
+        "X-Auth-Token": process.env.soccerKey,
         "Access-Control-Allow-Origin": "*"
        }
     })
