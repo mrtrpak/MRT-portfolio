@@ -14,5 +14,11 @@ An App that can detect a face from an image provided and tracks user submissions
 
 [Business Card Creator]("https://stormy-harbor-93453.herokuapp.com/)
 A business card creator that creates a personalized printout for the user. React, MDBootstrap, MySql & Express were tools used.
+## Technical Skills 
 
+- React, Javascript, ES6- ES2020, CSS3, NodeJS, Redux, Bootstrap, Foundation, MySQL, MongoDB, JQuery, RESTful API, Firebase, Express.js, Heroku
+
+## Soft Skills
+
+- team-oriented, adaptability, dedicated to growth, problem-solver, ability to lead, organized, cultural awareness
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
