@@ -4,6 +4,10 @@
 
 - I have created this portfolio page to be able to improve my UI design as well as showcase my projects I have done and the skills I have acquired doing so.
 
+## Website
+
+- [CLICK HERE to go to website!](https://mrt-portfolio.herokuapp.com/)
+
 ## Projects 
 
 - [Eagle Outfitters Clothing](https://eagle-outfitters.herokuapp.com/)
@@ -21,4 +25,7 @@ A business card creator that creates a personalized printout for the user. React
 ## Soft Skills
 
 - team-oriented, adaptability, dedicated to growth, problem-solver, ability to lead, organized, cultural awareness
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Create React App
+
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
